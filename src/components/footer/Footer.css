@@ -1,0 +1,25 @@
+footer {
+    background-color: #39720C;
+    color: #ffffff;
+    padding: 1px;
+    text-align: center;
+    font-size: 10px;
+    font-family: 'Leckerli One', cursive;
+    bottom: 0px;
+    width: 100%;
+    position: fixed;
+    cursor: default;
+}
+
+#footer_logo{
+    position: absolute;
+    top: 3px;
+    width: 30px;
+    height: 30px;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+    cursor: pointer;
+    right: 51%;
+}
