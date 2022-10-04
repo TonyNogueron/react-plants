@@ -1,0 +1,342 @@
+
+header{
+    background-color: #39720C;
+    color: #ffffff;
+    padding: 1px;
+    text-align: center;
+    font-size: 8px;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    cursor: default;
+}
+
+footer{
+    background-color: #39720C;
+    color: #ffffff;
+    padding: 1px;
+    text-align: center;
+    font-size: 10px;
+    font-family: 'Leckerli One', cursive;
+    bottom: 0px;
+    width: 100%;
+    position: fixed;
+    cursor: default;
+}
+header h1{
+    font-size: 55px;
+    font-family: 'Leckerli One', cursive;
+}
+
+
+
+#header_logo{
+    position: absolute;
+    top: 0;
+    width: 70px;
+    height: 70px;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+    cursor: pointer;
+    right: 60%;
+    margin-right: -50px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+
+
+body {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    background-color: #d8e187;
+    margin: 0;
+}
+
+#UserNameHeader{
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#PasswordHeader{
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+#login{
+    background-color: #b2d5ca;
+    border-radius: 20px;
+    width: 400px;
+    height: 450px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding : 10px 60px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
+}
+
+#login h2{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#login ul {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#login li {
+    float: none;
+    padding: 8px;
+    display: inline-block;
+}
+
+
+#register{
+    background-color: #43ae8d;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    border: none;
+    width: 150px;
+    cursor: pointer;
+}
+
+#register_button{
+    background-color: #036848;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    border: none;
+    width: 150px;
+    cursor: pointer;
+}
+
+#register_button:hover{
+    background-color: #39720C;
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
+}
+
+#register ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#register li {
+    padding: 20px;
+    float: none;
+}
+
+#LoginButton{
+    background-color: #036848;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    border: none;
+    width: 150px;
+    cursor: pointer;
+}
+
+#LoginButton:hover{
+    background-color: #39720C;
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
+}
+
+#cancel {
+    padding: 6px;
+    font-size: 14px;
+    padding : 8px 30px;
+    background-color: #a23535;
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    border: none;
+    width: 150px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#cancel:hover{
+    background-color: #ff0000;
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
+}
+
+#username{
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border : none;
+    width: 300px;
+    position: relative;
+}
+
+#username:hover{
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
+}
+
+#password{
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border : none;
+    width: 300px;
+}
+
+#password:hover{
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
+}
+
+#confirmPassword{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#register_background{
+    background-color: #43ae8d;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    padding : 10px 60px;
+    font-size: 20px;
+    display: none;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
+}
+
+#register_background ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#register_background li {
+    padding: 2px;
+    float: none;
+}
+
+#join_header{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: -5px;
+}
+
+#confirmPassword{
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border : none;
+    width: 300px;
+}
+
+@media screen and (max-width: 600px) {
+    header{
+        font-size: 5px;
+        position: relative;
+    }
+    
+    #login{
+        width: 230px;
+        height: 600px;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+        padding : 10px 60px;
+        font-size: 20px;
+        margin-bottom: 10px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #login ul{
+        padding: 0;
+    }
+
+    #login li{
+        padding: 15px;
+        display: block;
+    }
+    #register_background{
+        width: 230px;
+    }
+
+    #username{
+        width: 100px;
+    }
+
+    #password{
+        width: 100px;
+    }
+
+    #register{
+        width: 100px;
+        font-size: 20px;
+    }
+
+    #confirmPassword{
+        width: 100px;
+    }
+
+    #LoginButton{
+        width: 100px;
+    }
+
+    #cancel{
+        padding : 8px 20px;
+    }
+
+    #login h2{
+        font-size: 35px;
+    }
+
+    #login{
+        padding : 10px 30px;
+    }
+
+    #register_background{
+        padding : 10px 30px;
+    }
+    #header_logo{
+        display: none;
+    }
+
+}

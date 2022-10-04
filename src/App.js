@@ -1,5 +1,4 @@
 import './App.css';
-import './components/text-input-component/TextInput.css';
 import Register from './components/text-input-component/TextInput.js';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
