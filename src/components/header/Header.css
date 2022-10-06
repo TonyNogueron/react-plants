@@ -2,7 +2,6 @@ header {
     background-color: #39720C;
     color: #ffffff;
     padding: 1px;
-    text-align: center;
     font-size: 8px;
     font-weight: bold;
     width: 100%;
@@ -11,22 +10,19 @@ header {
 }
 
 header h1{
-    font-size: 55px;
-    font-family: 'Leckerli One', cursive;
+    width: 297px;
+    left: calc(50% - 297px/2 - 583.5px);
+    font-family: 'Leckerli One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    color: #FFFFFF;
 }
 
 #header_logo{
     position: absolute;
-    top: 0;
     width: 70px;
     height: 70px;
-    background-size: 100px 100px;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 2;
-    cursor: pointer;
-    right: 60%;
-    margin-right: -50px;
-    margin-top: 25px;
-    margin-bottom: 40px;
+    left: 20px;
+    bottom: 80px;
 }

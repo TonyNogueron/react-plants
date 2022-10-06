@@ -72,6 +72,29 @@ export default function Register() {
     );
   };
 
+  const animateToRegister = () => {
+    // get document by id
+    const register = document.getElementById("register_background");
+    const login = document.getElementById("login");
+    // dissapear login
+    login.style.display = "none";
+    // appear register
+    register.style.display = "block";
+
+  };
+
+  
+  const cancelRegister = () => {
+    // get document by id
+    const register = document.getElementById("register_background");
+    const login = document.getElementById("login");
+    // dissapear login
+    login.style.display = "block";
+    // appear register
+    register.style.display = "none";
+
+  }
+
   return (
     <>
       <section id="login">
@@ -113,7 +136,8 @@ export default function Register() {
             <button
               type="submit"
               id="register_button"
-              onclick="animateToRegister();"
+              // Onclick will call the function that will animate the register form
+              onClick={animateToRegister}
             >
               Register
             </button>
@@ -134,7 +158,7 @@ export default function Register() {
               id="username"
               name="username"
               placeholder="Username"
-			  onChange={handleUsername}
+			        onChange={handleUsername}
             />
           </li>
           <li>
@@ -148,7 +172,7 @@ export default function Register() {
               id="password"
               name="password"
               placeholder="Password"
-			  onChange={handlePassword}
+			        onChange={handlePassword}
             />
           </li>
           <li>
@@ -170,7 +194,11 @@ export default function Register() {
             </button>
           </li>
           <li>
-            <button type="submit" id="cancel" onclick="cancelRegister();">
+            <button 
+            type="submit" 
+            id="cancel" 
+            onclick={cancelRegister}
+            >
               Cancel
             </button>
           </li>
