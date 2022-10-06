@@ -92,7 +92,6 @@ export default function Register() {
     login.style.display = "block";
     // appear register
     register.style.display = "none";
-
   }
 
   return (
@@ -197,7 +196,7 @@ export default function Register() {
             <button 
             type="submit" 
             id="cancel" 
-            onclick={cancelRegister}
+            onClick={cancelRegister}
             >
               Cancel
             </button>
