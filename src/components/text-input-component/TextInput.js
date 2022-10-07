@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 import "./message.css";
-import ReactCSSTransitionGroup from 'react-transition-group'; // ES6
-import { render } from "@testing-library/react";
+//import ReactCSSTransitionGroup from 'react-transition-group'; // ES6
+//import { render } from "@testing-library/react";
 
 export default function Register() {
   // States for registration
