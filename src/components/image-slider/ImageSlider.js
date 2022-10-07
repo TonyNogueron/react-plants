@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function ImageSlider({ slides }) {
   const [current, setCurrent] = useState(0);
@@ -12,6 +12,12 @@ function ImageSlider({ slides }) {
     borderRadius: "10px",
     margin: "0 auto",
   };
+
+  useEffect(() => {
+    setInterval(() => {
+      handleRightClick();
+    }, 20000);
+  }, []);
 
   const outerDivStyles = {
     width: "720px",
@@ -27,7 +33,8 @@ function ImageSlider({ slides }) {
     transform: "translate(0, -50%)",
     top: "50%",
     left: "32px",
-    fontsize: "200px",
+    fontsize: "400px",
+    fontWeight: "bold",
     color: "white",
     zIndex: "1",
     cursor: "pointer",
@@ -46,18 +53,27 @@ function ImageSlider({ slides }) {
 
   const handleRightClick = () => {
     setCurrent(current === slides.length - 1 ? 0 : current + 1);
-  }
+  };
 
   const handleLeftClick = () => {
     setCurrent(current === 0 ? slides.length - 1 : current - 1);
-  }
+  };
 
+  const [ticking, setTicking] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => ticking && handleRightClick(), 1e4);
+    return () => clearTimeout(timer);
+  }, [current, ticking]);
 
 
   return (
     <div style={outerDivStyles}>
-      <div style={leftArrowStyles} onClick={handleLeftClick}>❮Flecha</div>
-      <div style={rightArrowStyles} onClick={handleRightClick}>❯Flecha</div>
+      <div style={leftArrowStyles} onClick={handleLeftClick}>
+        ❮
+      </div>
+      <div style={rightArrowStyles} onClick={handleRightClick}>
+        ❯
+      </div>
       <div style={insideStyles}></div>
     </div>
   );
