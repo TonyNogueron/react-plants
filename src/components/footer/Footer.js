@@ -8,7 +8,6 @@ function Footer() {
     <footer>
       <div id="footer_logo_box">
         <p>Planty</p>
-        <img src={logo} alt="Logo" id="footer_logo"></img>
       </div>
     </footer>
   );

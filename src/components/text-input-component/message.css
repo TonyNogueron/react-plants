@@ -1,86 +1,32 @@
-
-header{
-    background-color: #39720C;
-    color: #ffffff;
-    padding: 1px;
-    font-size: 8px;
-    font-weight: bold;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    cursor: default;
-}
-
-footer{
-    background-color: #39720C;
-    color: #ffffff;
-    padding: 1px;
-    font-size: 10px;
-    font-family: 'Leckerli One', cursive;
-    bottom: 0px;
-    width: 100%;
-    position: fixed;
-    cursor: default;
-}
-header h1{
-    font-size: 55px;
-    font-family: 'Leckerli One', cursive;
-}
-
-
-
-#header_logo{
-    position: absolute;
-    top: 0;
-    width: 70px;
-    height: 70px;
-    background-size: 100px 100px;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 2;
-    cursor: pointer;
-    right: 60%;
-    margin-right: -50px;
-    margin-top: 25px;
-    margin-bottom: 40px;
-}
-
-
-
-body {
-    font-size: 15px;
-    color: rgb(0, 0, 0);
-    margin: 0;
-}
+@import url('http://fonts.cdnfonts.com/css/crox');
+@import url('http://fonts.cdnfonts.com/css/montblanc');
 
 #UserNameHeader{
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
     line-height: 44px;
+    font-family: 'Crox', sans-serif;
+
 }
 
 #PasswordHeader{
     font-size: 30px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Crox', sans-serif;
     
 }
 
 #login{
-    background-color: #E2E1C4;
-    border-radius: 20px;
+    border-radius: 7px;
     width: 500px;
     height: 515px;
-    padding: 20px;
     margin-top: 50px;
-    margin-bottom: 50px;
-    padding : 10px 60px;
     font-size: 20px;
-    margin-bottom: 10px;
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 80%;
     transform: translate(-50%, -50%);
+    background-color: #E2E1C4;
     box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
 }
 
@@ -88,7 +34,7 @@ body {
     font-size: 40px;
     font-weight: 400;
     line-height: 80px;
-    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-family: 'Crox', sans-serif;
     margin-bottom: 5px;
 }
 
@@ -110,9 +56,8 @@ body {
     background-color: #E2E1C4;
     border-radius: 20px;
     font-size: 30px;
-    font-weight: bold;
     color: #ffffff;
-    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-family: 'Crox', sans-serif;
     border: none;
     width: 150px;
     cursor: pointer;
@@ -120,9 +65,8 @@ body {
 
 #register_button{
     background-color: #036848;
-    border-radius: 20px;
+    border-radius: 7px;
     font-size: 30px;
-    font-weight: bold;
     color: #ffffff;
     font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     border: none;
@@ -149,9 +93,8 @@ body {
 
 #LoginButton{
     background-color: #036848;
-    border-radius: 20px;
+    border-radius: 5px;
     font-size: 30px;
-    font-weight: bold;
     color: #ffffff;
     font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     border: none;
@@ -189,8 +132,9 @@ body {
     padding: 20px;
     border-radius: 10px;
     border : none;
-    width: 300px;
+    width: 400px;
     position: relative;
+    
 }
 
 #username:hover{
@@ -202,7 +146,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     border : none;
-    width: 300px;
+    width: 400px;
 }
 
 #password:hover{
@@ -261,10 +205,6 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    header{
-        font-size: 5px;
-        position: relative;
-    }
     
     #login{
         width: 230px;
@@ -327,9 +267,6 @@ body {
 
     #register_background{
         padding : 10px 30px;
-    }
-    #header_logo{
-        display: none;
     }
 
 }

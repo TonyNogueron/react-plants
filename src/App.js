@@ -14,6 +14,7 @@ function App() {
       <Header />
       <Register />
       <Footer />
+      
     </div>
   );
 }
