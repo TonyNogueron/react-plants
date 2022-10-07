@@ -68,7 +68,7 @@
     border-radius: 7px;
     font-size: 30px;
     color: #ffffff;
-    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-family: 'Crox', sans-serif;
     border: none;
     width: 150px;
     cursor: pointer;
@@ -96,7 +96,7 @@
     border-radius: 5px;
     font-size: 30px;
     color: #ffffff;
-    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-family: 'Crox', sans-serif;
     border: none;
     width: 150px;
     cursor: pointer;
@@ -116,7 +116,7 @@
     font-size: 25px;
     font-weight: bold;
     color: #ffffff;
-    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-family: 'Crox', sans-serif;
     border: none;
     width: 150px;
     cursor: pointer;
@@ -134,7 +134,7 @@
     border : none;
     width: 400px;
     position: relative;
-    
+    font-family: 'Crox', sans-serif;
 }
 
 #username:hover{
@@ -147,6 +147,8 @@
     border-radius: 10px;
     border : none;
     width: 400px;
+    font-family: 'Crox', sans-serif;
+
 }
 
 #password:hover{
@@ -155,7 +157,7 @@
 
 #confirmPassword{
     font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Crox', sans-serif;
 }
 
 #register_background{
@@ -191,7 +193,7 @@
 #join_header{
     font-size: 40px;
     font-weight: bold;
-    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-family: 'Crox', sans-serif;
     margin-bottom: 5px;
     margin-top: -5px;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import "./ImageSlider.css";
 
 function ImageSlider({ slides }) {
   const [current, setCurrent] = useState(0);
@@ -21,11 +22,13 @@ function ImageSlider({ slides }) {
 
   const outerDivStyles = {
     width: "720px",
-    height: "500px",
+    height: "520px",
     margin: "0 auto",
-    position: "absolute",
-    left: "8%",
-    top: "26.5%",
+    position: "fixed",
+    left: "2%",
+    top: "22%",
+    right: "70%",
+
   };
 
   const leftArrowStyles = {
@@ -67,11 +70,11 @@ function ImageSlider({ slides }) {
 
 
   return (
-    <div style={outerDivStyles}>
+    <div style={outerDivStyles} id = "borderFuera">
       <div style={leftArrowStyles} onClick={handleLeftClick}>
         ❮
       </div>
-      <div style={rightArrowStyles} onClick={handleRightClick}>
+      <div style={rightArrowStyles} onClick={handleRightClick} >
         ❯
       </div>
       <div style={insideStyles}></div>
