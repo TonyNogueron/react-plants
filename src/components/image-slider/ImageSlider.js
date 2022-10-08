@@ -28,7 +28,11 @@ function ImageSlider({ slides }) {
     left: "2%",
     top: "22%",
     right: "70%",
-
+    bottom: "0%",
+    borderRadius: "10px",
+    overflow: "hidden",
+    boxshadow: "0 0 10px 0 rgba(0, 0, 0, 0.5)",
+    
   };
 
   const leftArrowStyles = {

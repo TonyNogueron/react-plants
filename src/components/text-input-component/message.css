@@ -231,20 +231,33 @@
         display: block;
     }
     #register_background{
-        width: 230px;
+        width: 800px;
     }
 
     #username{
         width: 100px;
+        font-size: 15px;
+    }
+
+    #UserNameHeader{
+        font-size: 25px;
+    }
+
+    
+    #passwordHeader{
+        font-size: 15px;
     }
 
     #password{
         width: 100px;
+        font-size: 15px ;
     }
+
 
     #register{
         width: 100px;
         font-size: 20px;
+
     }
 
     #confirmPassword{
@@ -253,6 +266,7 @@
 
     #LoginButton{
         width: 100px;
+        
     }
 
     #cancel{
@@ -265,10 +279,18 @@
 
     #login{
         padding : 10px 30px;
+        
     }
 
     #register_background{
         padding : 10px 30px;
     }
+
+    #register_button{
+        width: 100px;
+        font-size: 20px;
+    }
+ 
+
 
 }

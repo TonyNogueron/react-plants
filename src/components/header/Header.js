@@ -11,7 +11,7 @@ function Header() {
         <img src={logo} alt="Logo" id="header_logo" />
       </div>
       <div class = "header_nav">
-        <a> Home</a>
+        <a> Login</a>
         <a> About</a>
         <a> Contact</a>
       </div>

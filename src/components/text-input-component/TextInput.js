@@ -78,8 +78,10 @@ export default function Register() {
     // get document by id
     const register = document.getElementById("register_background");
     const login = document.getElementById("login");
+    const slider = document.getElementById("borderFuera");
     // dissapear login
     login.style.display = "none";
+    slider.style.display = "none";
     // appear register
     register.style.display = "block";
 
@@ -90,10 +92,13 @@ export default function Register() {
     // get document by id
     const register = document.getElementById("register_background");
     const login = document.getElementById("login");
+    const slider = document.getElementById("borderFuera");
     // dissapear login
     login.style.display = "block";
+    
     // appear register
     register.style.display = "none";
+    slider.style.display = "block";
   }
 
   return (
