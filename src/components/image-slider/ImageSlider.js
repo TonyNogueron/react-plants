@@ -10,7 +10,6 @@ function ImageSlider({ slides }) {
     backgroundPosition: "center",
     width: "100%",
     height: "100%",
-    borderRadius: "10px",
     margin: "0 auto",
   };
 
@@ -21,17 +20,13 @@ function ImageSlider({ slides }) {
   }, []);
 
   const outerDivStyles = {
-    width: "720px",
-    height: "520px",
-    margin: "0 auto",
-    position: "fixed",
-    left: "2%",
-    top: "22%",
-    right: "70%",
-    bottom: "0%",
-    borderRadius: "10px",
+    width: "100%",
+    height: "100%",
     overflow: "hidden",
-    boxshadow: "0 0 10px 0 rgba(0, 0, 0, 0.5)",
+    position: "fixed",
+    top: "11%",
+    bottom: "0%",
+    overflow: "hidden",
     
   };
 

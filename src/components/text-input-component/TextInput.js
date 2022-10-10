@@ -81,7 +81,6 @@ export default function Register() {
     const slider = document.getElementById("borderFuera");
     // dissapear login
     login.style.display = "none";
-    slider.style.display = "none";
     // appear register
     register.style.display = "block";
 
@@ -98,7 +97,6 @@ export default function Register() {
     
     // appear register
     register.style.display = "none";
-    slider.style.display = "block";
   }
 
   return (
