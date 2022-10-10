@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-plants/static/css/main.c9192348.css",
+    "main.js": "/react-plants/static/js/main.b8227b6b.js",
+    "static/js/787.6861d9fc.chunk.js": "/react-plants/static/js/787.6861d9fc.chunk.js",
+    "static/media/logo.png": "/react-plants/static/media/logo.8bb5d185ced49e713a14.png",
+    "index.html": "/react-plants/index.html",
+    "main.c9192348.css.map": "/react-plants/static/css/main.c9192348.css.map",
+    "main.b8227b6b.js.map": "/react-plants/static/js/main.b8227b6b.js.map",
+    "787.6861d9fc.chunk.js.map": "/react-plants/static/js/787.6861d9fc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9192348.css",
+    "static/js/main.b8227b6b.js"
+  ]
+}
