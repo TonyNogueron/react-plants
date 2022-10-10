@@ -10,6 +10,8 @@ header {
     top: 0;
     cursor: default;
     position: fixed;
+    box-shadow: 3px 4px 5px rgb(0 0 0 / 50%);
+    z-index: 7;
 }
 
 header h1{
@@ -21,6 +23,13 @@ header h1{
     font-size: 50px;
     line-height: 44px;
     color: #FFFFFF;
+    text-shadow: 2px 1px 1px rgb(0 0 0 / 50%);
+}
+
+header h1:hover{
+    color: #000000;
+    text-shadow: 2px 1px 1px rgb(255 255 255 / 50%);
+    cursor: pointer;
 }
 
 #header_logo{
@@ -31,6 +40,10 @@ header h1{
     bottom: 35px;
     display: inline-block;
 }
+
+#header_logo:hover{
+    cursor: pointer;
+}   
 
 .header_nav{
     position: absolute;
@@ -50,11 +63,14 @@ header h1{
     margin: 0 10px;
     font-size: 20px;
     font-family: 'Crox', sans-serif;
+    text-shadow: 2px 1px 1px rgb(0 0 0 / 50%);
 
 }
 
 .header_nav a:hover{
     color: #82df40;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 .header_nav .icon{
@@ -72,10 +88,14 @@ header h1{
     font-family: 'Crox', sans-serif;
     padding: 10px 20px;
     cursor: pointer;
+    transition: 0.5s;
+    margin: 0 10px;
 }
 
 #login-button:hover{
     background: #39720C;
+    box-shadow: 3px 4px 5px rgb(0 0 0 / 50%);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {

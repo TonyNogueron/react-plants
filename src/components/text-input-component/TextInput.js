@@ -79,10 +79,17 @@ export default function Register() {
     const register = document.getElementById("register_background");
     const login = document.getElementById("login");
     const slider = document.getElementById("borderFuera");
-    // dissapear login
-    login.style.display = "none";
-    // appear register
-    register.style.display = "block";
+
+    // Arc animation for dissapearing login and appearing register
+    login.style.transition = "all 0.5s ease-in-out";
+    login.style.animation = "arc 1s ease-in-out forwards";
+    login.style.animationDelay = "0.5s";
+    login.style.opacity = "0";
+    // Appearing register
+    register.style.transition = "all 0.5s ease-in-out";
+    register.style.animation = "arc 1s ease-in-out forwards";
+    register.style.animationDelay = "0.5s";
+    register.style.opacity = "1";
 
   };
 
@@ -92,11 +99,16 @@ export default function Register() {
     const register = document.getElementById("register_background");
     const login = document.getElementById("login");
     const slider = document.getElementById("borderFuera");
-    // dissapear login
-    login.style.display = "block";
-    
-    // appear register
-    register.style.display = "none";
+    // Arc animation for dissapearing login and appearing register
+    login.style.transition = "all 0.5s ease-in-out";
+    login.style.animation = "arc 1s ease-in-out forwards";
+    login.style.animationDelay = "0.5s";
+    login.style.opacity = "1";
+    // Appearing register
+    register.style.transition = "all 0.5s ease-in-out";
+    register.style.animation = "arc 1s ease-in-out forwards";
+    register.style.animationDelay = "0.5s";
+    register.style.opacity = "0";
   }
 
   return (
