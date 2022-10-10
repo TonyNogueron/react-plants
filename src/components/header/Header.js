@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Header.css";
-
+import ReactDOM from 'react-dom';
 import logo from "../../images/logo.png";
 
 
@@ -26,8 +26,8 @@ function Header() {
       <div class = "header_nav" id = "myTopnav">
         <a> About</a>
         <a> Contact</a>
-        <a id = "login-button"> Login</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        <a id ="login-button" href=""> Login</a>
+        <a href="javascript:void(0);" class="icon" onclick={compactHeader}>&#9776;</a>
       </div>
     </header>
   );

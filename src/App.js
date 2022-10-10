@@ -4,10 +4,10 @@
 */
 
 import './App.css';
-import Register from './components/text-input-component/TextInput.js';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import ImageSlider from './components/image-slider/ImageSlider';
+import LoginRegister from './components/login-register/LoginRegister';
 
 const slidesArray = [
   {url: 'https://media.admagazine.com/photos/61de539e089751617cd2fc74/16:9/w_2560%2Cc_limit/plantas.jpg', title: 'Plants'},
@@ -21,8 +21,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <ImageSlider slides={slidesArray}/>
-      <Register />
+      <ImageSlider slides={slidesArray} />
+      <LoginRegister />
       <Footer />
     </div>
   );
