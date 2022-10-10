@@ -67,6 +67,7 @@ function ImageSlider({ slides }) {
     const timer = setTimeout(() => ticking && handleRightClick(), 1e4);
     return () => clearTimeout(timer);
   }, [current, ticking]);
+  
 
 
   return (
