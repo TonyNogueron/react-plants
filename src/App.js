@@ -21,6 +21,8 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <ImageSlider slides={slidesArray} />
+      <LoginRegister />
       <Footer />
     </div>
   );

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import "./LoginPage.css";
+import "./LoginRegister.css";
 //import ReactCSSTransitionGroup from 'react-transition-group'; // ES6
 //import { render } from "@testing-library/react";
 
@@ -75,21 +75,25 @@ export default function Register() {
   };
 
   const animateToRegister = () => {
+    let timer = 500;
     // get document by id
     const register = document.getElementById("register_background");
     const login = document.getElementById("login");
     const slider = document.getElementById("borderFuera");
-
-    // Arc animation for dissapearing login and appearing register
+    login.style.display = "none";
     login.style.transition = "all 0.5s ease-in-out";
     login.style.animation = "arc 1s ease-in-out forwards";
     login.style.animationDelay = "0.5s";
+    login.style.translation = "translateY(100%)";
     login.style.opacity = "0";
+    // remove login
     // Appearing register
     register.style.transition = "all 0.5s ease-in-out";
     register.style.animation = "arc 1s ease-in-out forwards";
     register.style.animationDelay = "0.5s";
     register.style.opacity = "1";
+    register.style.display = "block";
+
 
   };
 
@@ -100,10 +104,13 @@ export default function Register() {
     const login = document.getElementById("login");
     const slider = document.getElementById("borderFuera");
     // Arc animation for dissapearing login and appearing register
+    login.style.display = "block";
     login.style.transition = "all 0.5s ease-in-out";
     login.style.animation = "arc 1s ease-in-out forwards";
     login.style.animationDelay = "0.5s";
     login.style.opacity = "1";
+    login.style.translation = "translateX(0)";
+    // appeare login and dissapear register
     // Appearing register
     register.style.transition = "all 0.5s ease-in-out";
     register.style.animation = "arc 1s ease-in-out forwards";
