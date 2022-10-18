@@ -1,0 +1,39 @@
+.percentageTemp{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    display: inline-block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.percentageTemp .percentageTemp__container{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background: #fff;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.percentageTemp .percentageTemp__container .percentageTemp__container__title{
+    font-size: 10px;
+    color: #000;
+    letter-spacing: 2px;
+    margin-bottom: 75px;
+    position: absolute;
+}
+
+.percentageTemp .percentageTemp__container .percentageTemp__container__percentage{
+    font-size: 20px;
+    color: #000;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    margin-top: 40px;
+    position: absolute;
+}

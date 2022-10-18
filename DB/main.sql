@@ -3,7 +3,7 @@ CREATE DATABASE plantyDB;
 
 USE plantyDB;
 
-CREATE TABLE profile(
+CREATE TABLE perfil(
     idProfile INT AUTO_INCREMENT,
     user VARCHAR(45),
     password VARCHAR(45),

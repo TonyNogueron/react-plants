@@ -8,6 +8,8 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import ImageSlider from './components/image-slider/ImageSlider';
 import LoginRegister from './components/login-register/LoginRegister';
+import SensorCard from './components/sensor-card/sensorCard';
+import WeatherHumidity from './components/weatherHumidity/WeatherHumidity';
 
 const slidesArray = [
   {url: 'https://media.admagazine.com/photos/61de539e089751617cd2fc74/16:9/w_2560%2Cc_limit/plantas.jpg', title: 'Plants'},
@@ -21,8 +23,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <ImageSlider slides={slidesArray} />
-      <LoginRegister />
+      <SensorCard />
+      <WeatherHumidity />
       <Footer />
     </div>
   );
