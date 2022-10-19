@@ -7,7 +7,7 @@ function WeatherHumidity() {
             <div className = "imageWat">
                 <div className="waterContainer">
                     <div className="WaterLevelsHeader">
-                        <h1>Water levels</h1>
+                        <h1>Water level</h1>
                     </div>
                     <div className="WaterLevelsText" id = "box-text">
                         <h2>0 %</h2>

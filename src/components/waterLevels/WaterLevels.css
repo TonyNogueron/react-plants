@@ -5,11 +5,9 @@
     position: fixed;
     top: 60%;
     left: 70%;
-    box-shadow: 0 30px 30px 30px rgba(48, 37, 209, 0.2);
     border-radius: 7px;
-    border-width: 2px;
-    border-color: #000;
-    border-style: solid;
+    box-shadow: 0 10px 10px 5px rgb(79,156,53,0.2);
+
 }
 
 

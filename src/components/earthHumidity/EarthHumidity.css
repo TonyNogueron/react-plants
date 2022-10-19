@@ -3,13 +3,12 @@
     width: 400px;
     display: inline-block;
     position: fixed;
-    top: 65%;
+    top: 66%;
     left: 5%;
-    box-shadow: 0 25px 25px 0 rgba(235, 193, 103, 0.2);
     border-radius: 7px;
-    border-width: 2px;
-    border-color: #000;
-    border-style: solid;
+
+    box-shadow: 0 10px 10px 5px rgb(79,156,53,0.2);
+
 }
 
 #imagEarthHumidity{

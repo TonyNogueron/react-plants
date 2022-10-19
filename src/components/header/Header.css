@@ -1,8 +1,7 @@
 @import url('http://fonts.cdnfonts.com/css/showdriel');
 
 header {
-    background: rgb(79,156,53);
-    background: linear-gradient(0deg, rgba(79,156,53,1) 0%, rgba(116,155,52,1) 52%, rgba(57,114,12,1) 100%);     color: #ffffff;
+    background-color: #39720C;
     padding: 1px;
     font-size: 8px;
     font-weight: bold;
