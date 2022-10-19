@@ -6,7 +6,7 @@ function WeatherHumidity() {
     return (
         <div className="percentageHum">
             <div className = "imageHum">
-                <img src={waterDropImg} alt="humidity" />
+                <img src={waterDropImg} alt="humidity" id = "imgHumidity" />
                 <div className="percentageHum__container">
                     <div className="percentageHum__container__percentage" id = "box-text">
                         <h1>0 %</h1>
