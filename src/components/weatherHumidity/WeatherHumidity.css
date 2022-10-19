@@ -7,6 +7,9 @@
     left: 5%;
     box-shadow: 0 15px 15px 0 rgba(58, 220, 231, 0.2);
     border-radius: 7px;
+    border-width: 2px;
+    border-color: #000;
+    border-style: solid;
 }
 
 #imgHumidity{
