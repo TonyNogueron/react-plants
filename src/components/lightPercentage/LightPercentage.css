@@ -1,23 +1,23 @@
-.percentageHum{
+.percentageLight{
     height: 100px;
     width: 200px;
     display: inline-block;
     position: fixed;
-    top: 25%;
+    top: 45%;
     left: 80%;
-    box-shadow: 0 15px 15px 0 rgba(58, 220, 231, 0.2);
+    box-shadow: 0 15px 15px 0 rgba(225, 235, 88, 0.2);
     border-radius: 7px;
 }
 
-#imgHumidity{
-    height: 75px;
+#imgLight{
+    height: 60px;
     left: 15%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
 }
 
-.percentageHum .percentageHum__container__percentage{
+.percentageLight .percentageLight__container__percentage{
     font-size: 20px;
     color: #000;
     letter-spacing: 2px;
