@@ -1,20 +1,30 @@
 .percentageHum{
-    height: 250px;
-    width: 250px;
+    height: 100px;
+    width: 200px;
     display: inline-block;
     position: fixed;
-    top: 25%;
-    left: 85%;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    top: 15%;
+    left: 80%;
+    box-shadow: 0 15px 15   px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
 }
 
-.percentageHum .imageHum img{
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    background: #fff;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#imgHumidity{
+    height: 75px;
+    left: 15%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.percentageHum .percentageHum__container__percentage{
+    font-size: 20px;
+    color: #000;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    margin-top: 40px;
+    position: flex;
+    left: 50%;
+    transform: translate(15%, -30%);
+
 }
