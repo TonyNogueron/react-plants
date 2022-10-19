@@ -1,23 +1,17 @@
-.percentageHum{
-    height: 100px;
+.waterPlants{
+    height: 200px;
     width: 400px;
     display: inline-block;
     position: fixed;
     top: 25%;
-    left: 5%;
-    box-shadow: 0 15px 15px 0 rgba(58, 220, 231, 0.2);
+    left: 75%;
+    box-shadow: 0 30px 30px 30px rgba(58, 147, 231, 0.2);
     border-radius: 7px;
 }
 
-#imgHumidity{
-    height: 75px;
-    left: 15%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
 
-.percentageHum .percentageHum__container__percentage{
+
+.waterPlants .waterText{
     font-size: 20px;
     color: #000;
     letter-spacing: 2px;

@@ -12,6 +12,7 @@ import SensorCard from './components/sensor-card/sensorCard';
 import WeatherHumidity from './components/weatherHumidity/WeatherHumidity';
 import LightPercentage from './components/lightPercentage/LightPercentage';
 import EarthHumidity from './components/earthHumidity/EarthHumidity';
+import WaterPlants from './components/waterPlants/WaterPlants';
 
 const slidesArray = [
   {url: 'https://media.admagazine.com/photos/61de539e089751617cd2fc74/16:9/w_2560%2Cc_limit/plantas.jpg', title: 'Plants'},
@@ -29,6 +30,7 @@ function App() {
       <WeatherHumidity />
       <LightPercentage />
       <EarthHumidity />
+      <WaterPlants />
       <Footer />
     </div>
   );
