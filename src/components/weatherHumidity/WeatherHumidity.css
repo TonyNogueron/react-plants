@@ -29,3 +29,18 @@
     transform: translate(15%, -30%);
 
 }
+
+@media screen and (max-width: 600px) {
+    .percentageHum{
+        height: 100px;
+        width: 100px;
+    }
+
+    #imgHumidity{
+        height: 50px;
+        left: 15%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

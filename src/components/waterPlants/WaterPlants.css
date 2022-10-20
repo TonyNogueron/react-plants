@@ -3,14 +3,12 @@
     width: 400px;
     display: inline-block;
     position: fixed;
-    top: 75%;
+    top: 77%;
     left: 5%;
     border-radius: 7px;
     box-shadow: 0 10px 10px 5px rgb(79,156,53,0.2);
 
 }
-
-
 
 .waterPlants .waterText{
     font-size: 20px;

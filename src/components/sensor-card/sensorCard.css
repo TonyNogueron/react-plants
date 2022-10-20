@@ -38,3 +38,15 @@
     margin-top: 40px;
     position: absolute;
 }
+
+@media screen and (max-width: 600px) {
+    .percentageTemp{
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        display: inline-block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+    }
+}
