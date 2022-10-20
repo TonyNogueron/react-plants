@@ -1,11 +1,12 @@
 .percentageHum{
-    height: 100px;
+    height: 75px;
     width: 400px;
     display: inline-block;
     position: fixed;
-    top: 25%;
+    top: 17%;
     left: 5%;
     box-shadow: 0 10px 10px 5px rgb(79,156,53,0.2);
+    border-radius: 7px;
 
 }
 
@@ -22,7 +23,7 @@
     color: #000;
     letter-spacing: 2px;
     margin-bottom: 5px;
-    margin-top: 40px;
+    margin-top: 25px;
     position: flex;
     left: 50%;
     transform: translate(15%, -30%);

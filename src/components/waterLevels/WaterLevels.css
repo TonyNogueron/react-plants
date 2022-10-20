@@ -1,23 +1,21 @@
 .WaterLevels{
-    height: 200px;
+    height: 125px;
     width: 400px;
     display: inline-block;
     position: fixed;
-    top: 60%;
-    left: 70%;
+    top: 56%;
+    left: 5%;
     border-radius: 7px;
     box-shadow: 0 10px 10px 5px rgb(79,156,53,0.2);
 
 }
-
-
 
 .WaterLevels .WaterLevelsText{
     font-size: 20px;
     color: #000;
     letter-spacing: 2px;
     margin-bottom: 5px;
-    margin-top: 40px;
+    margin-top: 25px;
     position: flex;
     left: 50%;
     transform: translate(15%, -30%);
