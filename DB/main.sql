@@ -18,7 +18,7 @@ CREATE TABLE planta(
         FOREIGN KEY(idProfile) REFERENCES profile(idProfile)
 );
 
-CREATE TABLE sensors(
+CREATE TABLE measurement(
     idSensors INT,
     earthHumidity DOUBLE,
     lightPercent DOUBLE,
@@ -33,3 +33,5 @@ CREATE TABLE sensors(
         FOREIGN KEY(idPlanta) REFERENCES planta(idPlanta)
 
 );
+
+DROP TABLE sensors;
