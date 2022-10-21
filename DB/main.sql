@@ -1,4 +1,3 @@
--- Active: 1665614358725@@127.0.0.1@3306@plantydb
 CREATE DATABASE plantyDB;
 
 USE plantyDB;

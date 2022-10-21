@@ -17,7 +17,7 @@ function SensorCard() {
     return (
         <div className="plantStatus_container">
             <div className="plantStatusImg">
-                <img src={plantStatusImg} alt="Plant Status" onClick={changeSVGColor}/>
+                <img src={plantStatusImg} alt="Plant Status" id = "svgStatus" onClick={changeSVGColor}/>
             </div>
         </div>
         
