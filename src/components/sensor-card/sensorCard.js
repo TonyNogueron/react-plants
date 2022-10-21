@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./sensorCard.css";
-import ReactCSSTransitionGroup from 'react-transition-group'; // ES6
+//import ReactCSSTransitionGroup from 'react-transition-group'; // ES6
 import plantStatusImg from '../../images/plantStatus.svg';
 
 
