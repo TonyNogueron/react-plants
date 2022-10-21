@@ -28,3 +28,28 @@
     transform: translate(15%, -30%);
 
 }
+
+@media screen and (max-width: 600px) {
+    .percentageLight{
+        height: 50px;
+        width: 100px;
+        left: 37%;
+        top: 12%;
+    }
+
+    #imgLight{
+        height: 30px;
+        left: 20%;
+        position: absolute;
+        top: 50%;
+    }
+
+    .percentageLight .percentageLight__container__percentage{
+        font-size: 10px;
+        color: #000;
+        margin-bottom: 2px;
+        margin-top: 20px;
+        position: flex;
+        left: 90%;
+    }
+}

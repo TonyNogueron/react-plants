@@ -1,4 +1,4 @@
-.percentageTemp{
+.plantStatus_container{
     height: 400px;
     width: 400px;
     border-radius: 50%;
@@ -11,36 +11,8 @@
 
 }
 
-.percentageTemp .percentageTemp__container{
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    background: #fff;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.percentageTemp .percentageTemp__container .percentageTemp__container__title{
-    font-size: 10px;
-    color: #000;
-    letter-spacing: 2px;
-    margin-bottom: 75px;
-    position: absolute;
-}
-
-.percentageTemp .percentageTemp__container .percentageTemp__container__percentage{
-    font-size: 20px;
-    color: #000;
-    letter-spacing: 2px;
-    margin-bottom: 5px;
-    margin-top: 40px;
-    position: absolute;
-}
-
 @media screen and (max-width: 600px) {
-    .percentageTemp{
+    .plantStatus_container{
         height: 200px;
         width: 200px;
         border-radius: 50%;

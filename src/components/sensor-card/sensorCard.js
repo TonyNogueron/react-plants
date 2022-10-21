@@ -1,19 +1,24 @@
 import React from "react";
 import styles from "./sensorCard.css";
 import ReactCSSTransitionGroup from 'react-transition-group'; // ES6
+import plantStatusImg from '../../images/plantStatus.svg';
 
+
+const changeSVGColor = () => {
+    let status = 0;
+    const plantStatusImg = document.querySelector('.plantStatusImg');
+    plantStatusImg.addEventListener('click', () => {
+        console.log('click');
+        plantStatusImg.style.fill = 'green';
+    });
+}
 
 function SensorCard() {
     return (
-        <div className="percentageTemp">
-            <div className="percentageTemp__container">
-                <div className="percentageTemp__container__title">
-                    <h2>Temperature</h2>
-                </div>
-                <div className="percentageTemp__container__percentage">
-                    <h1>0 °C</h1>
-                </div>
-              </div>
+        <div className="plantStatus_container">
+            <div className="plantStatusImg">
+                <img src={plantStatusImg} alt="Plant Status" onClick={changeSVGColor}/>
+            </div>
         </div>
         
     );
