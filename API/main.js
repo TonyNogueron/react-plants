@@ -6,7 +6,13 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const mysql2 = require('mysql2');
 
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+const pool = mysql2.createPool({
+    host: '', // Link de amazon
+    user: 'admin',
+    password: process.env.PASSWORD,
+    database: 'PlantyDatabase', // Nombre de la base de datos creada en mysql
+
 });
+

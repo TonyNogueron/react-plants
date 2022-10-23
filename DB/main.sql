@@ -5,7 +5,7 @@ USE plantyDB;
 CREATE TABLE perfil(
     idProfile INT AUTO_INCREMENT,
     user VARCHAR(45),
-    password VARCHAR(45),
+    psswd VARCHAR(56),
     PRIMARY KEY(idProfile)
 );
 

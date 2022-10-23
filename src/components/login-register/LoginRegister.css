@@ -280,8 +280,8 @@
     }
 
     #LoginButton{
-        width: 100px;
-        
+        width: 125px;
+        font-size: 25px;        
     }
 
     #cancel{
@@ -306,8 +306,8 @@
     }
 
     #register_button{
-        width: 200px;
-        font-size: 30px;
+        width: 125px;
+        font-size: 25px;
     }
  
 

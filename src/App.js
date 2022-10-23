@@ -27,12 +27,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <SensorCard />
-      <WeatherHumidity />
-      <LightPercentage />
-      <EarthHumidity />
-      <WaterPlants />
-      <WaterLevels />
+      <ImageSlider slides={slidesArray} />
+      <LoginRegister />
       <Footer />
     </div>
   );
