@@ -17,6 +17,7 @@ import LightPercentage from "./components/lightPercentage/LightPercentage";
 import EarthHumidity from "./components/earthHumidity/EarthHumidity";
 import WaterPlants from "./components/waterPlants/WaterPlants";
 import WaterLevels from "./components/waterLevels/WaterLevels";
+import RegisterPage from "./pages/register-page/RegisterPage";
 
 const slidesArray = [
   {
@@ -47,6 +48,7 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/react-plants/" element={<HomePage />} />
+          <Route exact path="/RegisterPage/" element={<RegisterPage/>} />
         </Routes>
       </Router>
     </div>

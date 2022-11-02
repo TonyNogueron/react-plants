@@ -21,13 +21,13 @@ function Header() {
     return (
     <header className={styles.header}>
       <h1 className={styles.h1}>Planty</h1>
-      <div id="header_logo-box">
+      <div id="header_logo-box" onClick={() => navigate("/react-plants")}>
         <img src={logo} alt="Logo" id="header_logo" />
       </div>
       <div class = "header_nav" id = "myTopnav">
         <a> About</a>
         <a  > Contact</a>
-        <a id ="register-button" onClick={() => navigate("/register")}> Register</a>
+        <a id ="register-button" onClick={() => navigate("/RegisterPage")}> Register</a>
         <a href="javascript:void(0);" class="icon" onClick={compactHeader}>&#9776;</a>
       </div>
     </header>

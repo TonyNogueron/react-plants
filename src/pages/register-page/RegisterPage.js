@@ -1,9 +1,9 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
 import styles from './RegisterPage.css';
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
-import LoginRegister from './components/login-register/LoginRegister';
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
+import LoginRegister from '../../components/login-register/LoginRegister';
 import ImageSlider from "../../components/image-slider/ImageSlider";
 
 const slidesArray = [
