@@ -17,7 +17,7 @@ const compactHeader = () => {
 
 
 function Header() {
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
     return (
     <header className={styles.header}>
       <h1 className={styles.h1}>Planty</h1>
@@ -26,9 +26,9 @@ function Header() {
       </div>
       <div class = "header_nav" id = "myTopnav">
         <a> About</a>
-        <a> Contact</a>
-        <a id ="register-button" href=""> Register</a>
-        <a href="javascript:void(0);" class="icon" onclick={compactHeader}>&#9776;</a>
+        <a  > Contact</a>
+        <a id ="register-button" onClick={() => navigate("/register")}> Register</a>
+        <a href="javascript:void(0);" class="icon" onClick={compactHeader}>&#9776;</a>
       </div>
     </header>
   );
