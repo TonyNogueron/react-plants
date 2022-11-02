@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Header.css";
-import ReactDOM from 'react-dom';
+import { useNavigate } from "react-router-dom";
 import logo from "../../images/logo.png";
 
 
@@ -17,7 +17,8 @@ const compactHeader = () => {
 
 
 function Header() {
-  return (
+    //const navigate = useNavigate();
+    return (
     <header className={styles.header}>
       <h1 className={styles.h1}>Planty</h1>
       <div id="header_logo-box">
@@ -26,7 +27,7 @@ function Header() {
       <div class = "header_nav" id = "myTopnav">
         <a> About</a>
         <a> Contact</a>
-        <a id ="login-button" href=""> Login</a>
+        <a id ="register-button" href=""> Register</a>
         <a href="javascript:void(0);" class="icon" onclick={compactHeader}>&#9776;</a>
       </div>
     </header>
@@ -34,3 +35,7 @@ function Header() {
 }
 
 export default Header;
+/*
+        <a id ="login-button"   onClick={() => navigate("/LoginPage")}> Login</a>
+
+*/

@@ -26,10 +26,9 @@ const slidesArray = [
 function App() {
   return (
     <div className="App">
-      <Header />
-      <ImageSlider slides={slidesArray} />
-      <LoginRegister />
-      <Footer />
+        <Header />
+
+        <Footer />
     </div>
   );
 }
