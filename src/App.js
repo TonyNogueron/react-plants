@@ -47,7 +47,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route exact path="/react-plants/" element={<HomePage />} />
+          <Route exact path="/" element={<HomePage />} />
           <Route exact path="/RegisterPage/" element={<RegisterPage/>} />
         </Routes>
       </Router>

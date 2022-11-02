@@ -25,12 +25,11 @@ function Header() {
         <img src={logo} alt="Logo" id="header_logo" />
       </div>
       <div class = "header_nav" id = "myTopnav">
-          <a onClick={() => navigate("/react-plants")} >Home</a>
+          <a onClick={() => navigate("/")} >Home</a>
           <a id ="register-button" onClick={() => navigate("/RegisterPage")}> Register</a>
-
           <a> About</a>
-        <a  > Contact</a>
-        <a href="javascript:void(0);" class="icon" onClick={compactHeader}>&#9776;</a>
+          <a> Contact</a>
+          <a href="javascript:void(0);" class="icon" onClick={compactHeader}>&#9776;</a>
       </div>
     </header>
   );
