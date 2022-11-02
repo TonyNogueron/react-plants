@@ -8,7 +8,7 @@ import styles from "./HomePage.css";
 function HomePage() {
   let navigate = useNavigate();
   return (
-    <div>
+    <div className="homePage">
       <Header />
         <TopBlock/>
       <Footer />

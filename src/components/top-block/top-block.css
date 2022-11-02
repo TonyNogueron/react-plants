@@ -5,7 +5,7 @@
 }
 
 .topBlock{
-    margin-top: 180px;
+    margin-top: 250px;
     width: 1000px;
 
 }
@@ -34,6 +34,13 @@
     height: 50px;
     color: #ffffff;
     border: none;
+}
+
+.topBlock .topBlock-textBox img{
+    height: 300px;
+    position: absolute;
+    margin-left: 1000px;
+    margin-bottom: 50px;
 }
 
 .topBlock .topBlock-textBox button:hover{

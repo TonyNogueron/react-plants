@@ -92,9 +92,10 @@ header h1:hover{
 }
 
 #login-button:hover{
-    background: #82df40;
+    background: #39720C;
     box-shadow: 3px 4px 5px rgb(0 0 0 / 50%);
     cursor: pointer;
+    color: #ffffff;
 }
 
 @media screen and (max-width: 600px) {
