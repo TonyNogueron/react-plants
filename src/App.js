@@ -5,20 +5,13 @@
 
 import "./App.css";
 import React from "react";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import HomePage from "./pages/home-page/HomePage";
 import ImageSlider from "./components/image-slider/ImageSlider";
 import LoginRegister from "./components/login-register/LoginRegister";
-import SensorCard from "./components/sensor-card/sensorCard";
-import WeatherHumidity from "./components/weatherHumidity/WeatherHumidity";
-import LightPercentage from "./components/lightPercentage/LightPercentage";
-import EarthHumidity from "./components/earthHumidity/EarthHumidity";
-import WaterPlants from "./components/waterPlants/WaterPlants";
-import WaterLevels from "./components/waterLevels/WaterLevels";
-import RegisterPage from "./pages/register-page/RegisterPage";
 
+import RegisterPage from "./pages/register-page/RegisterPage";
+import MainSensors from "./pages/sensors-page/mainSensors";
 const slidesArray = [
   {
     url: "https://media.admagazine.com/photos/61de539e089751617cd2fc74/16:9/w_2560%2Cc_limit/plantas.jpg",
@@ -49,6 +42,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/RegisterPage/" element={<RegisterPage/>} />
+          <Route exact path = "/mainSensors/" element={<MainSensors/>} />
         </Routes>
       </Router>
     </div>
