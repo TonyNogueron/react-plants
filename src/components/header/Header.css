@@ -79,10 +79,10 @@ header h1:hover{
 
 
 #login-button{
-    background: #036848;
+    background: #ffffff;
     border-radius: 10px;
     border: none;
-    color: #ffffff;
+    color: #036848;
     font-size: 20px;
     font-family: 'Crox', sans-serif;
     padding: 10px 20px;
@@ -92,7 +92,7 @@ header h1:hover{
 }
 
 #login-button:hover{
-    background: #39720C;
+    background: #82df40;
     box-shadow: 3px 4px 5px rgb(0 0 0 / 50%);
     cursor: pointer;
 }

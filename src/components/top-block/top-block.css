@@ -1,0 +1,45 @@
+@import url('http://fonts.cdnfonts.com/css/crox');
+
+:root{
+    --marLeft: 80px;
+}
+
+.topBlock{
+    margin-top: 180px;
+    width: 1000px;
+
+}
+
+.topBlock .topBlock-textBox{
+    text-align: left;
+    margin-left: var(--marLeft);
+}
+
+.topBlock .topBlock-textBox h1{
+    font-size: 80px;
+    font-weight: bold;
+    margin: auto;
+}
+
+.topBlock .topBlock-textBox p{
+    font-size: 20px;
+    text-align: justify;
+}
+
+.topBlock .topBlock-textBox button{
+    background-color: #488b76;
+    font-size: 25px;
+    border-radius: 20px;
+    width: 180px;
+    height: 50px;
+    color: #ffffff;
+    border: none;
+}
+
+.topBlock .topBlock-textBox button:hover{
+    background-color: #39720C;
+    transition: 0.2s;
+    cursor: pointer;
+    width: 200px;
+}
+
