@@ -2,17 +2,25 @@
     Made by : Armando Arredondo Valle, Antonio Noguerón Bárcenas and Camila Turner Escalante
     Start date: 21/10/2022
 */
+//password: process.env.PASSWORD,
 
 const express = require('express');
+const mysql = require('mysql2');
+const router = express.Router();
+
+
+// const order = require('./routes/order');
+
+
+
+const cors = require('cors');
 const app = express();
-const port = 3000;
-const mysql2 = require('mysql2');
+const port = process.env.PORT || 3001;
 
-const pool = mysql2.createPool({
-    host: '', // Link de amazon
-    user: 'admin',
-    password: process.env.PASSWORD,
-    database: 'PlantyDatabase', // Nombre de la base de datos creada en mysql
+app.use(express.json());
+app.use(cors());
 
-});
+//app.use('/', order);
+
+app.listen(port, () => console.log(`Servidor iniciado en http://localhost:${port}`));
 

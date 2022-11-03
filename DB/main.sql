@@ -20,19 +20,10 @@ USE `Planty` ;
 CREATE TABLE IF NOT EXISTS `Planty`.`User` (
   `idUser` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
   `psswd` VARCHAR(56) NOT NULL,
   PRIMARY KEY (`idUser`))
 ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `Planty`.`user`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Planty`.`user` (
-  `username` VARCHAR(16) NOT NULL,
-  `email` VARCHAR(255) NULL,
-  `password` VARCHAR(32) NOT NULL,
-  `create_time` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP);
 
 
 -- -----------------------------------------------------
@@ -100,4 +91,3 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
