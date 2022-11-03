@@ -1,44 +1,51 @@
 import { useState } from "react";
-
 import "./LoginRegister.css";
-//import ReactCSSTransitionGroup from 'react-transition-group'; // ES6
-//import { render } from "@testing-library/react";
 
 export default function Register() {
-  // States for registration
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // States for login
+  const [usernameLogin, setUsernameLogin] = useState("");
+  const [passwordLogin, setPasswordLogin] = useState("");
+
+  //States for registration
+  const [usernameRegister, serUsernameRegister] = useState("");
+  const [emailRegister, setEmailRegister] = useState("");
+  const [passwordRegister, setPasswordRegister] = useState("");
+  const [confirmPasswordRegister, setConfirmPasswordRegister] = useState("");
 
   // States for checking the errors
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
 
-  // Handling the name change
-  const handleUsername = (e) => {
-	if(e.target.value){
-
-	}
-    setUsername(e.target.value);
-    setSubmitted(false);
+  // Handling the register
+  const handleUsernameRegister = (e) => {
+    serUsernameRegister(e.target.value);
+  };
+  const handleEmailRegister = (e) => {
+    setEmailRegister(e.target.value);
+  };
+  const handlePasswordRegister = (e) => {
+    setPasswordRegister(e.target.value);
+  };
+  const handleConfirmPasswordRegister = (e) => {
+    setConfirmPasswordRegister(e.target.value);
   };
 
-  // Handling the email change
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
+  // Handling the name change
+  const handleUsernameLogin = (e) => {
+    setUsernameLogin(e.target.value);
     setSubmitted(false);
   };
 
   // Handling the password change
-  const handlePassword = (e) => {
-    setPassword(e.target.value);
+  const handlePasswordLogin = (e) => {
+    setPasswordLogin(e.target.value);
     setSubmitted(false);
   };
 
   // Handling the form submission
-  const handleSubmit = (e) => {
+  const handleSubmitLogin = (e) => {
     e.preventDefault();
-    if (username === "" || email === "" || password === "") {
+    if (usernameLogin === "" || passwordLogin === "") {
       setError(true);
     } else {
       setSubmitted(true);
@@ -46,33 +53,17 @@ export default function Register() {
     }
   };
 
-  // Showing success message
-  const successMessage = () => {
-    return (
-      <div
-        className="success"
-        style={{
-          display: submitted ? "" : "none",
-        }}
-      >
-        <h1>User {username} successfully registered!!</h1>
-      </div>
-    );
-  };
+// Handling the form registration
+const handleSubmitRegister = (e) => {
+  e.preventDefault();
+  if (usernameRegister === "" || emailRegister === "" || passwordRegister === "" || confirmPasswordRegister === "") {
+    setError(true);
+  } else {
+    setSubmitted(true);
+    setError(false);
+  }
+};
 
-  // Showing error message if error is true
-  const errorMessage = () => {
-    return (
-      <div
-        className="error"
-        style={{
-          display: error ? "" : "none",
-        }}
-      >
-        <h1>Please enter all the fields</h1>
-      </div>
-    );
-  };
 
   const animateToRegister = () => {
     let timer = 500;
@@ -93,11 +84,8 @@ export default function Register() {
     register.style.animationDelay = "0.5s";
     register.style.opacity = "1";
     register.style.display = "block";
-
-
   };
 
-  
   const cancelRegister = () => {
     // get document by id
     const register = document.getElementById("register_background");
@@ -116,13 +104,12 @@ export default function Register() {
     register.style.animation = "arc 1s ease-in-out forwards";
     register.style.animationDelay = "0.5s";
     register.style.opacity = "0";
-  }
+  };
 
   return (
     <>
       <section id="login">
         <h2>Welcome to Planty!</h2>
-        {/*form with js*/}
         <ul>
           <li>
             <label htmlFor="username" id="UserNameHeader">
@@ -135,6 +122,7 @@ export default function Register() {
               id="username"
               name="username"
               placeholder="Username"
+              onChange={handleUsernameLogin}
             />
           </li>
           <li>
@@ -148,11 +136,12 @@ export default function Register() {
               id="password"
               name="password"
               placeholder="Password"
+              onChange={handlePasswordLogin}
             />
           </li>
           <li>
             <button type="submit" id="LoginButton" onclick="login()">
-              Login
+              Login 
             </button>
           </li>
           <li>
@@ -181,7 +170,21 @@ export default function Register() {
               id="username"
               name="username"
               placeholder="Username"
-			        onChange={handleUsername}
+              onChange={handleUsernameRegister}
+            />
+          </li>
+          <li>
+            <label htmlfor="email" id="UserNameHeader">
+              Email
+            </label>
+          </li>
+          <li>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Email"
+              onChange={handleEmailRegister}
             />
           </li>
           <li>
@@ -195,7 +198,7 @@ export default function Register() {
               id="password"
               name="password"
               placeholder="Password"
-			        onChange={handlePassword}
+              onChange={handlePasswordRegister}
             />
           </li>
           <li>
@@ -209,6 +212,7 @@ export default function Register() {
               id="confirmPassword"
               name="confirmPassword"
               placeholder="Confirm Password"
+              onChange={handleConfirmPasswordRegister}
             />
           </li>
           <li>
@@ -217,11 +221,7 @@ export default function Register() {
             </button>
           </li>
           <li>
-            <button 
-            type="submit" 
-            id="cancel" 
-            onClick={cancelRegister}
-            >
+            <button type="submit" id="cancel" onClick={cancelRegister}>
               Cancel
             </button>
           </li>
