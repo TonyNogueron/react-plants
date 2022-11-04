@@ -14,7 +14,7 @@ const config = {
     connectionLimit: 100,
     host: 'testingclass1004b.ccdundegl4lm.us-east-1.rds.amazonaws.com',
     user: 'admin',
-    password: '1-Teamokas',
+    password: process.env.PASSWORD,
     database: 'Planty',
     port: 3306,
     debug: false
