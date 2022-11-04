@@ -4,16 +4,18 @@
 #UserNameHeader{
     font-style: normal;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 20px;
     line-height: 44px;
     font-family: 'Crox', sans-serif;
 
 }
 
 #PasswordHeader{
-    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 44px;
     font-family: 'Crox', sans-serif;
-    
 }
 
 #login{
@@ -56,11 +58,11 @@
 #register{
     background-color: #ffffff;
     border-radius: 20px;
-    font-size: 30px;
     color: #ffffff;
     font-family: 'Crox', sans-serif;
     border: none;
     width: 150px;
+    height: 910px;
     cursor: pointer;
 
 }
@@ -113,18 +115,15 @@
 }
 
 #cancel {
-    padding: 6px;
-    font-size: 14px;
-    padding : 8px 30px;
     background-color: #a23535;
-    border-radius: 20px;
-    font-size: 25px;
-    font-weight: bold;
+    border-radius: 5px;
+    font-size: 30px;
     color: #ffffff;
     font-family: 'Crox', sans-serif;
     border: none;
     width: 150px;
     cursor: pointer;
+    margin: 20px;
 }
 
 #cancel:hover{
@@ -133,7 +132,25 @@
 }
 
 #username{
-    font-size: 20px;
+    font-size: 15px;
+    height: 2px;
+    padding: 20px;
+    border-radius: 10px;
+    border : none;
+    width: 400px;
+    position: relative;
+    font-family: 'Crox', sans-serif;
+    background-color: #efefef;
+
+}
+
+#username:hover{
+    box-shadow: 3px 4px 5px rgb(0 0 0 / 50%);
+}
+
+#password{
+    font-size: 15px;
+    height: 2px;
     padding: 20px;
     border-radius: 10px;
     border : none;
@@ -143,21 +160,6 @@
     background-color: #efefef;
 }
 
-#username:hover{
-    box-shadow: 3px 4px 5px rgb(0 0 0 / 50%);
-}
-
-#password{
-    font-size: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    border : none;
-    width: 400px;
-    font-family: 'Crox', sans-serif;
-    background-color: #efefef;
-
-}
-
 #password:hover{
     box-shadow: 3px 4px 5px rgb(0 0 0 / 50%);
     transition: 0.5s;
@@ -165,30 +167,30 @@
 }
 
 #confirmPassword{
-    font-size: 20px;
+    font-size: 15px;
+    height: 2px;
     padding: 20px;
     border-radius: 10px;
     border : none;
     width: 400px;
+    position: relative;
     font-family: 'Crox', sans-serif;
+    background-color: #efefef;
 }
 
 #register_background{
     background-color: #ffffff;
-    padding: 20px;
     border-radius: 10px;
-    margin: 0 auto;
-    padding: 20px;
     margin-top: 10px;
-    padding : 10px 60px;
+    padding : 10px 20px;
     font-size: 20px;
     position: fixed;
-    top: 55%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
     width: 500px;
-    height: 515px;
+    height: 560px;
     opacity: 0;
 }
 
@@ -209,15 +211,17 @@
     font-weight: bold;
     font-family: 'Crox', sans-serif;
     margin-bottom: 5px;
-    margin-top: -5px;
+    margin-top: 45px;
 }
 
 #confirmPassword{
-    font-size: 20px;
+    font-size: 15px;
+    height: 2px;
     padding: 20px;
     border-radius: 10px;
     border : none;
     width: 400px;
+    position: relative;
     font-family: 'Crox', sans-serif;
     background-color: #efefef;
 }

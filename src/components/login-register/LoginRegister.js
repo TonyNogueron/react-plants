@@ -215,17 +215,13 @@ const handleSubmitRegister = (e) => {
               onChange={handleConfirmPasswordRegister}
             />
           </li>
-          <li>
-            <button type="submit" id="register_button" onclick="addRegister()">
-              Join!
-            </button>
-          </li>
-          <li>
-            <button type="submit" id="cancel" onClick={cancelRegister}>
-              Cancel
-            </button>
-          </li>
         </ul>
+        <button type="submit" id="cancel" onClick={cancelRegister}>
+          Cancel
+        </button>
+        <button type="submit" id="register_button" onClick="addRegister()">
+          Join!
+        </button>
       </section>
     </>
   );
