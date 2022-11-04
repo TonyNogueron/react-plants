@@ -9,7 +9,7 @@ const mysql = require('mysql2');
 const router = express.Router();
 
 
-const register = require('./routes/register');
+const user = require('./routes/user');
 
 
 
@@ -20,7 +20,7 @@ const port = process.env.PORT || 3001;
 app.use(express.json());
 app.use(cors());
 
-app.use('/', register);
+app.use('/', user);
 
 app.listen(port, () => console.log(`Servidor iniciado en http://localhost:${port}`));
 
