@@ -96,7 +96,7 @@ const handleSubmitRegister = (e) => {
     login.style.transition = "all 0.5s ease-in-out";
     login.style.animation = "arc 1s ease-in-out forwards";
     login.style.animationDelay = "0.5s";
-    login.style.opacity = "1";
+    login.style.opacity = "0.9";
     login.style.translation = "translateX(0)";
     // appeare login and dissapear register
     // Appearing register
