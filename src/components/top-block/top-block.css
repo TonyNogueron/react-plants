@@ -5,15 +5,20 @@
 }
 
 .topBlock{
-    top: 50%;
-    width: 1000px;
+    top: 55%;
+    width: 2000px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: fixed;
     transform: translate(-50%, -50%);
-    left: 500px;
+    left: 600px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 80%;
 }
 
 .topBlock .topBlock-textBox{
@@ -25,11 +30,15 @@
     font-size: 80px;
     font-weight: bold;
     margin: auto;
+    margin-bottom: 20px;
+
 }
 
 .topBlock .topBlock-textBox p{
     font-size: 20px;
     text-align: justify;
+    margin-right: 50px;
+
 }
 
 .topBlock .topBlock-textBox button{
@@ -50,6 +59,12 @@
 }
 
 
+.topBlock .topBlock-textBox button:active{
+    background-color: #2E5A0B;
+    transition: 0.2s;
+    cursor: pointer;
+    width: 200px;
+}
 
 @media screen and (max-width: 600px)  {
     .topBlock{
