@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/react-plants/static/css/main.122bc6cc.css",
-    "main.js": "/react-plants/static/js/main.984e3c61.js",
+    "main.css": "/react-plants/static/css/main.dbc17f2e.css",
+    "main.js": "/react-plants/static/js/main.69455d75.js",
     "static/js/787.6861d9fc.chunk.js": "/react-plants/static/js/787.6861d9fc.chunk.js",
     "static/media/logo.png": "/react-plants/static/media/logo.8bb5d185ced49e713a14.png",
+    "static/media/waterDrop.png": "/react-plants/static/media/waterDrop.833fc628df3df22f342f.png",
+    "static/media/lightImg.png": "/react-plants/static/media/lightImg.ab3823e61e0b86e8c329.png",
+    "static/media/plantStatus.svg": "/react-plants/static/media/plantStatus.3215ac453618373e50e4e7b943ff3e04.svg",
     "index.html": "/react-plants/index.html",
-    "main.122bc6cc.css.map": "/react-plants/static/css/main.122bc6cc.css.map",
-    "main.984e3c61.js.map": "/react-plants/static/js/main.984e3c61.js.map",
+    "main.dbc17f2e.css.map": "/react-plants/static/css/main.dbc17f2e.css.map",
+    "main.69455d75.js.map": "/react-plants/static/js/main.69455d75.js.map",
     "787.6861d9fc.chunk.js.map": "/react-plants/static/js/787.6861d9fc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.122bc6cc.css",
-    "static/js/main.984e3c61.js"
+    "static/css/main.dbc17f2e.css",
+    "static/js/main.69455d75.js"
   ]
 }
