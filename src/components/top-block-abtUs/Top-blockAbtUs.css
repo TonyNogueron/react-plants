@@ -1,0 +1,115 @@
+@import url('http://fonts.cdnfonts.com/css/crox');
+
+:root{
+    --marLeft: 80px;
+}
+
+.TopBlockAbtUs{
+    top: 55%;
+    width: 2000px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 600px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 80%;
+}
+
+.TopBlockAbtUs .TopBlockAbtUs-textBox{
+    text-align: left;
+    margin-left: var(--marLeft);
+}
+
+.TopBlockAbtUs .TopBlockAbtUs-textBox h1{
+    font-size: 80px;
+    font-weight: bold;
+    margin-top: 0%;
+
+}
+
+.TopBlockAbtUs .TopBlockAbtUs-textBox p{
+    font-size: 20px;
+    text-align: justify;
+    margin-right: 50px;
+
+}
+
+.TopBlockAbtUs .TopBlockAbtUs-textBox button{
+    background-color: #488b76;
+    font-size: 25px;
+    border-radius: 20px;
+    width: 180px;
+    height: 50px;
+    color: #ffffff;
+    border: none;
+}
+
+.TopBlockAbtUs .TopBlockAbtUs-textBox button:hover{
+    background-color: #39720C;
+    transition: 0.2s;
+    cursor: pointer;
+    width: 200px;
+}
+
+
+.TopBlockAbtUs .TopBlockAbtUs-textBox button:active{
+    background-color: #2E5A0B;
+    transition: 0.2s;
+    cursor: pointer;
+    width: 200px;
+}
+
+@media screen and (max-width: 600px)  {
+    .TopBlockAbtUs{
+        transform: translate(-50%, -50%);
+        width: 100%;
+        top: 50%;
+        left: 50%;
+    }
+
+    .TopBlockAbtUs .TopBlockAbtUs-textBox{
+        margin-left: 0px;
+        text-align: center;
+        align-items: center;
+        position: center;
+    }
+
+    .TopBlockAbtUs .TopBlockAbtUs-textBox h1{
+        font-size: 50px;
+        font-weight: bold;
+        margin: auto;
+        text-align: center;
+    }
+
+    .TopBlockAbtUs .TopBlockAbtUs-textBox p{
+        font-size: 25px;
+        text-align: justify;
+        align-items: center;
+        position: center;
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    .TopBlockAbtUs .TopBlockAbtUs-textBox button{
+        background-color: #488b76;
+        font-size: 20px;
+        border-radius: 20px;
+        width: 200px;
+        height: 50px;
+        color: #ffffff;
+        border: none;
+    }
+
+    .TopBlockAbtUs .TopBlockAbtUs-textBox button:hover{
+        background-color: #39720C;
+        transition: 0.2s;
+        cursor: pointer;
+        width: 200px;
+    }
+}
