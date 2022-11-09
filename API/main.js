@@ -2,20 +2,18 @@
     Made by : Armando Arredondo Valle, Antonio Noguerón Bárcenas and Camila Turner Escalante
     Start date: 21/10/2022
 */
-const express = require('express');
-const mysql = require('mysql2');
-const router = express.Router();
+const express = require("express");
+const user = require("./routes/user");
 
-
-const user = require('./routes/user');
-
-const cors = require('cors');
+const cors = require("cors");
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cors());
 
-app.use('/', user);
+app.use("/", user);
 
-app.listen(port, () => console.log(`Servidor iniciado en http://localhost:${port}`));
+app.listen(port, () =>
+  console.log(`Servidor iniciado en http://localhost:${port}`)
+);
