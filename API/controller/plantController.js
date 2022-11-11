@@ -1,4 +1,4 @@
-const connection = require("../config/mySqlConfig");
+const connection = require("../config/mysqlConfig");
 
 const registerPlant = (req, res) => {
   const body = req.body;
