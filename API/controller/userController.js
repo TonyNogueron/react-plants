@@ -1,4 +1,4 @@
-const connection = require("../config/mySqlConfig");
+const connection = require("../config/mysqlConfig");
 
 const registerUser = (req, res) => {
   const body = req.body;
