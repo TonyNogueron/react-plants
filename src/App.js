@@ -16,6 +16,7 @@ import ContactPage from "./pages/contactPage/ContactPage";
 function App() {
   return (
     <div className="App">
+      <>
       <Router>
         <Routes>
           <Route exact path="/" element={<HomePage />} />
@@ -25,6 +26,7 @@ function App() {
           <Route exact path = "/ContactPage/" element={<ContactPage/>} />
         </Routes>
       </Router>
+      </>
     </div>
   );
 }
