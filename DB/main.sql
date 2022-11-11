@@ -50,7 +50,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Planty`.`Measurement` (
   `idMeasurement` INT NOT NULL AUTO_INCREMENT,
-  `collectionDate` DATE NULL,
+  `collectionDate` DATETIME NULL,
   `airHumidity` DOUBLE NULL,
   `temperature` DOUBLE NULL,
   `light` DOUBLE NULL,
