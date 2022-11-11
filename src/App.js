@@ -22,7 +22,7 @@ function App() {
           <Route exact path="/RegisterPage/" element={<RegisterPage/>} />
           <Route exact path = "/mainSensors/" element={<MainSensors/>} />
           <Route exact path = "/AboutUs/" element={<AboutUs/>} />
-            <Route exact path = "/ContactPage/" element={<ContactPage/>} />
+          <Route exact path = "/ContactPage/" element={<ContactPage/>} />
         </Routes>
       </Router>
     </div>
