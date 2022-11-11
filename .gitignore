@@ -27,3 +27,4 @@ yarn-error.log*
 /.idea/dataSources/3d40c23c-2ef6-4e16-9467-7c510c4fcf4e/storage_v2/_src_/schema/mysql.osA4Bg.meta
 /.idea/dataSources/3d40c23c-2ef6-4e16-9467-7c510c4fcf4e/storage_v2/_src_/schema/performance_schema.kIw0nw.meta
 /.idea/dataSources/3d40c23c-2ef6-4e16-9467-7c510c4fcf4e/storage_v2/_src_/schema/sys.zb4BAA.meta
+.idea/discord.xml

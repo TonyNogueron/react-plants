@@ -11,6 +11,7 @@ import HomePage from "./pages/home-page/HomePage";
 import RegisterPage from "./pages/register-page/RegisterPage";
 import MainSensors from "./pages/sensors-page/mainSensors";
 import AboutUs from "./pages/about-us-page/AboutUs";
+import ContactPage from "./pages/contactPage/ContactPage";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/RegisterPage/" element={<RegisterPage/>} />
           <Route exact path = "/mainSensors/" element={<MainSensors/>} />
-            <Route exact path = "/AboutUs/" element={<AboutUs/>} />
+          <Route exact path = "/AboutUs/" element={<AboutUs/>} />
+            <Route exact path = "/ContactPage/" element={<ContactPage/>} />
         </Routes>
       </Router>
     </div>

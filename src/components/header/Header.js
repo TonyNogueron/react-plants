@@ -27,7 +27,7 @@ function Header() {
       <div class = "header_nav" id = "myTopnav">
           <a onClick={() => navigate("/")} >Home</a>
           <a onClick={() => navigate("/AboutUs")}> About us</a>
-          <a> Contact</a>
+          <a onClick={() => navigate("/ContactPage")}> Contact</a>
           <a id = "login-button" onClick={() => navigate("/RegisterPage")}>Login</a>
           <a href="javascript:void(0);" class="icon" onClick={compactHeader}>&#9776;</a>
       </div>
