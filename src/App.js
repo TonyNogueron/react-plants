@@ -13,21 +13,27 @@ import MainSensors from "./pages/sensors-page/mainSensors";
 import AboutUs from "./pages/about-us-page/AboutUs";
 import ContactPage from "./pages/contactPage/ContactPage";
 import AddPlant from "./pages/addPlant-page/AddPlant";
+import ChartPage from "./pages/chart-page/ChartPage";
 
 function App() {
   return (
     <div className="App">
       <>
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<HomePage />} />
-          <Route exact path="/RegisterPage/" element={<RegisterPage/>} />
-          <Route exact path = "/mainSensors/" element={<MainSensors/>} />
-          <Route exact path = "/AboutUs/" element={<AboutUs/>} />
-          <Route exact path = "/ContactPage/" element={<ContactPage/>} />
-          <Route exact path = "/........................./" element={<AddPlant/>} />
-        </Routes>
-      </Router>
+        <Router>
+          <Routes>
+            <Route exact path="/" element={<HomePage />} />
+            <Route exact path="/RegisterPage/" element={<RegisterPage />} />
+            <Route exact path="/mainSensors/" element={<MainSensors />} />
+            <Route exact path="/AboutUs/" element={<AboutUs />} />
+            <Route exact path="/ContactPage/" element={<ContactPage />} />
+            <Route
+              exact
+              path="/........................./"
+              element={<AddPlant />}
+            />
+            <Route exact path="/chart/" element={<ChartPage />} />
+          </Routes>
+        </Router>
       </>
     </div>
   );
