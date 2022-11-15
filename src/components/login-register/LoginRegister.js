@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./LoginRegister.css";
+import axios from "axios";
 
 export default function Register() {
   // States for login
@@ -53,17 +54,47 @@ export default function Register() {
     }
   };
 
-// Handling the form registration
-const handleSubmitRegister = (e) => {
-  e.preventDefault();
-  if (usernameRegister === "" || emailRegister === "" || passwordRegister === "" || confirmPasswordRegister === "") {
-    setError(true);
-  } else {
-    setSubmitted(true);
-    setError(false);
-  }
-};
+  // Handling the form registration
+  const handleSubmitRegister = async (e) => {
+    e.preventDefault();
+    if (
+      usernameRegister === "" ||
+      emailRegister === "" ||
+      passwordRegister === "" ||
+      confirmPasswordRegister === ""
+    ) {
+      setError(true);
+    } else {
+      const usernameStatus = await validateUsername(usernameRegister);
+      console.log(usernameStatus);
+      if (usernameStatus === "available") {
+        console.log("Username available");
+      } else if (usernameStatus === "occupied") {
+        console.log("Username occupied");
+      } else {
+        //error handling
+        console.log("Error");
+      }
+      setSubmitted(true);
+      setError(false);
+    }
+  };
 
+  const validateUsername = async (username) => {
+    await axios
+      .post("http://localhost:3001/user/validate", { username })
+      .then((res) => {
+        console.log(res);
+        if (res.status === 202) {
+          return "available";
+        } else {
+          return "occupied";
+        }
+      })
+      .catch((err) => {
+        return "error";
+      });
+  };
 
   const animateToRegister = () => {
     let timer = 500;
@@ -140,8 +171,8 @@ const handleSubmitRegister = (e) => {
             />
           </li>
           <li>
-            <button type="submit" id="LoginButton" onclick="login()">
-              Login 
+            <button type="submit" id="LoginButton" onClick={handleSubmitLogin}>
+              Login
             </button>
           </li>
           <li>
@@ -219,7 +250,11 @@ const handleSubmitRegister = (e) => {
         <button type="submit" id="cancel" onClick={cancelRegister}>
           Cancel
         </button>
-        <button type="submit" id="register_button" onClick="addRegister()">
+        <button
+          type="submit"
+          id="register_button"
+          onClick={handleSubmitRegister}
+        >
           Join!
         </button>
       </section>
