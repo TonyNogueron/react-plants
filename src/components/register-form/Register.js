@@ -8,6 +8,9 @@ export default function Register() {
   const [passwordRegister, setPasswordRegister] = useState("");
   const [confirmPasswordRegister, setConfirmPasswordRegister] = useState("");
 
+  const [usernameWarn, setUsernameWarn] = useState("");
+  const [emailWarn, setEmailWarn] = useState("");
+
   // Handling the register
   const handleUsernameRegister = (e) => {
     serUsernameRegister(e.target.value);
@@ -33,34 +36,48 @@ export default function Register() {
     ) {
       //Error "All fields are required"
     } else {
-      const usernameStatus = await validateUsername(usernameRegister);
-      console.log(usernameStatus);
-      if (usernameStatus === "available") {
-        console.log("Username available");
-      } else if (usernameStatus === "occupied") {
-        console.log("Username occupied");
-      } else {
-        //error handling
-        console.log("Error");
-      }
       //Submit, after validation
+      const isUsernameValid = await validateUsername(usernameRegister);
+      const isEmailValid = validateEmail(emailRegister);
+
+      if (isUsernameValid && isEmailValid) {
+        //Submit
+      }
     }
   };
 
   const validateUsername = async (username) => {
+    let answer = false;
     await axios
       .post("http://localhost:3001/user/validate", { username })
       .then((res) => {
-        console.log(res);
         if (res.status === 202) {
-          return "available";
+          answer = true;
+          setUsernameWarn("");
         } else {
-          return "occupied";
+          answer = false;
+          setUsernameWarn("Username already exists");
         }
       })
       .catch((err) => {
-        return "error";
+        answer = false;
       });
+    return answer;
+  };
+
+  const validateEmail = (email) => {
+    let ans = false;
+    const atpos = email.indexOf("@");
+    const dotpos = email.lastIndexOf(".");
+
+    if (atpos < 1 || dotpos - atpos < 2) {
+      setEmailWarn("Not a valid e-mail address");
+      ans = false;
+    } else {
+      setEmailWarn("");
+      ans = true;
+    }
+    return ans;
   };
 
   return (
@@ -82,9 +99,11 @@ export default function Register() {
                       placeholder="Enter a username"
                       onChange={handleUsernameRegister}
                     />
-                    <small id="usernameWarn" className="text-muted">
-                      We'll never share your email with anyone else.
-                    </small>
+                    {usernameWarn !== "" && (
+                      <small id="usernameWarn" className="text-muted">
+                        {usernameWarn}
+                      </small>
+                    )}
                   </div>
                   <div className="form-group">
                     <label form="exampleInputEmail1">Email address</label>
@@ -96,9 +115,11 @@ export default function Register() {
                       placeholder="Enter email"
                       onChange={handleEmailRegister}
                     />
-                    <small id="emailWarn" className="form-text text-muted">
-                      We'll never share your email with anyone else.
-                    </small>
+                    {emailWarn !== "" && (
+                      <small id="emailWarn" className="form-text text-muted">
+                        {emailWarn}
+                      </small>
+                    )}
                   </div>
                   <div className="form-group">
                     <label form="exampleInputPassword1">Password</label>
