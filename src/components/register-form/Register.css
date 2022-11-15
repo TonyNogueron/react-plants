@@ -95,5 +95,9 @@
 }
 
 .container .row .col .register_form .submitButton:hover{
-    background-color: #ffffff;
+    background: #39720C;
+    box-shadow: 3px 4px 5px rgb(0 0 0 / 50%);
+    cursor: pointer;
+    transition: 0.5s;
+    color: #ffffff;
 }
