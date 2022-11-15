@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import styles from './RegisterPage.css';
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
-import LoginRegister from '../../components/login-register/LoginRegister';
 import ImageSlider from "../../components/image-slider/ImageSlider";
+import Register from "../../components/register-form/Register";
 
 const slidesArray = [
     {url: 'https://media.admagazine.com/photos/61de539e089751617cd2fc74/16:9/w_2560%2Cc_limit/plantas.jpg', title: 'Plants'},
@@ -16,12 +16,11 @@ const slidesArray = [
 
 
 function RegisterPage(){
-    let navigate = useNavigate();
     return(
         <div className={styles.RegisterPage}>
             <Header />
             <ImageSlider slides={slidesArray} />
-            <LoginRegister />
+            <Register />
             <Footer />
         </div>
     );
@@ -30,3 +29,4 @@ function RegisterPage(){
 }
 
 export default RegisterPage;
+//            <ImageSlider slides={slidesArray} />

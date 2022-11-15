@@ -160,66 +160,7 @@ export default function Register() {
           </li>
         </ul>
       </section>
-      <section id="register_background">
-        <h2 id="join_header"> Join the Planty family! </h2>
-        <ul>
-          <li>
-            <label htmlfor="username" id="UserNameHeader">
-              Username
-            </label>
-          </li>
-          <li>
-            <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="Username"
-			        onChange={handleUsername}
-            />
-          </li>
-          <li>
-            <label htmlfor="password" id="PasswordHeader">
-              Password
-            </label>
-          </li>
-          <li>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Password"
-			        onChange={handlePassword}
-            />
-          </li>
-          <li>
-            <label htmlfor="confirmPassword" id="PasswordHeader">
-              Confirm Password
-            </label>
-          </li>
-          <li>
-            <input
-              type="password"
-              id="confirmPassword"
-              name="confirmPassword"
-              placeholder="Confirm Password"
-            />
-          </li>
-          <li>
-            <button type="submit" id="register_button" onclick="addRegister()">
-              Join!
-            </button>
-          </li>
-          <li>
-            <button 
-            type="submit" 
-            id="cancel" 
-            onClick={cancelRegister}
-            >
-              Cancel
-            </button>
-          </li>
-        </ul>
-      </section>
+
     </>
   );
 }
