@@ -103,7 +103,7 @@ export default function Login() {
   return (
     <>
       <section id="login" className="loginForm">
-        <div className="container">
+        <div className="login-container">
             <div className="row">
                 <div className="col">
                     <div className="loginForm__container">

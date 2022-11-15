@@ -1,3 +1,12 @@
 @import url('http://fonts.cdnfonts.com/css/crox');
 @import url('http://fonts.cdnfonts.com/css/montblanc');
 
+.login-container{
+    background-color: #ff0000;
+    height: 50vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Crox', sans-serif;
+}
