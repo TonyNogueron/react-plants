@@ -14,6 +14,7 @@ import AboutUs from "./pages/about-us-page/AboutUs";
 import ContactPage from "./pages/contactPage/ContactPage";
 import AddPlant from "./pages/addPlant-page/AddPlant";
 import ChartPage from "./pages/chart-page/ChartPage";
+import LoginPage from "./pages/login-page/LoginPage";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route exact path="/mainSensors/" element={<MainSensors />} />
             <Route exact path="/AboutUs/" element={<AboutUs />} />
             <Route exact path="/ContactPage/" element={<ContactPage />} />
+            <Route exact path = "/Login" element={<LoginPage/>}/>
             <Route
               exact
               path="/........................./"

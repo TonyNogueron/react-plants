@@ -28,7 +28,7 @@ function Header() {
           <a onClick={() => navigate("/")} >Home</a>
           <a onClick={() => navigate("/AboutUs")}> About us</a>
           <a onClick={() => navigate("/ContactPage")}> Contact</a>
-          <a id = "login-button" onClick={() => navigate("/RegisterPage")}>Login</a>
+          <a id = "login-button" onClick={() => navigate("/Login")}>Login</a>
           <a href="javascript:void(0);" class="icon" onClick={compactHeader}>&#9776;</a>
       </div>
     </header>
