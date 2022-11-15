@@ -1,12 +1,57 @@
 @import url('http://fonts.cdnfonts.com/css/crox');
 @import url('http://fonts.cdnfonts.com/css/montblanc');
 
-.login-container{
-    background-color: #ff0000;
-    height: 50vh;
-    width: 50%;
+
+.login-container .loginForm__container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Crox', sans-serif;
+
+}
+
+.loginForm__container .loginForm__container__title h1{
+    font-family: 'Crox', sans-serif;
+    font-size: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    font-weight: 400;
+}
+
+
+.loginForm__container .loginForm__container__form .formLogin .loginForm__container__form__input input{
+    width: 100%;
+
+    margin-bottom: 2rem;
+    outline: none;
+    border: none;
+    font-family: 'Crox', sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: #e3e2e2;
+    border-radius: 5px;
+    align-items: center;
+    align-content: center;
+
+}
+
+.loginForm__container .loginForm__container__form button{
+    width: 50%;
+    height: 2rem;
+    border: none;
+    outline: none;
+    background-color: #488b76;
+    color: #ffffff;
+    font-family: 'Crox', sans-serif;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loginForm__container .loginForm__container__form .GoToRegister a{
+    color: #39720C;
+    cursor: pointer;
 }

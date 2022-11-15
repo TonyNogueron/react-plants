@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./LoginRegister.css";
 import axios from "axios";
 
-export default function Login() {
-  // States for login
+function Login() {
+    const navigate = useNavigate();
+    // States for login
   const [usernameLogin, setUsernameLogin] = useState("");
   const [passwordLogin, setPasswordLogin] = useState("");
 
@@ -101,29 +103,27 @@ export default function Login() {
 
 
   return (
-    <>
       <section id="login" className="loginForm">
         <div className="login-container">
             <div className="row">
                 <div className="col">
                     <div className="loginForm__container">
                         <div className="loginForm__container__title">
-                            <h1>Log in</h1>
+                            <h1>Welcome to Planty!</h1>
                         </div>
                         <div className="loginForm__container__form">
-                            <form onSubmit={handleSubmitLogin}>
+                            <form onSubmit={handleSubmitLogin} className="formLogin">
                                 <div className="loginForm__container__form__input">
                                     <input type="text" placeholder="Username" onChange={handleUsernameLogin} />
                                 </div>
                                 <div className="loginForm__container__form__input">
                                     <input type="password" placeholder="Password" onChange={handlePasswordLogin} />
                                 </div>
-                                <div className="loginForm__container__form__input">
-                                    <button type="submit">Log in</button>
-                                </div>
+
                             </form>
+                            <button type="submit">Log in</button>
                             <div className="GoToRegister">
-                                <p>Don't have an account? <a href="#register">Register</a></p>
+                                <p>Don't have an account? <a onClick={() => navigate("/RegisterPage")}>Register</a></p>
                             </div>
                         </div>
                     </div>
@@ -131,6 +131,6 @@ export default function Login() {
             </div>
         </div>
       </section>
-    </>
   );
 }
+export default Login;
