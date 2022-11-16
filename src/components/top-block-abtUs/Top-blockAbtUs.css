@@ -6,7 +6,7 @@
 
 .TopBlockAbtUs{
     top: 55%;
-    width: 2000px;
+    width: 1920px;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@
     position: fixed;
     transform: translate(-50%, -50%);
     left: 600px;
-    background-color: aliceblue;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     opacity: 80%;
@@ -35,8 +35,9 @@
 
 .TopBlockAbtUs .TopBlockAbtUs-textBox p{
     font-size: 20px;
-    text-align: justify;
+    /* text-align: justify; */
     margin-right: 50px;
+    white-space: pre;
 
 }
 
