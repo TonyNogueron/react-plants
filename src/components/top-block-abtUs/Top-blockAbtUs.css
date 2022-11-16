@@ -6,7 +6,7 @@
 
 .TopBlockAbtUs{
     top: 55%;
-    width: 1920px;
+    width: 2000px;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -35,10 +35,8 @@
 
 .TopBlockAbtUs .TopBlockAbtUs-textBox p{
     font-size: 20px;
-    /* text-align: justify; */
+    text-align: justify;
     margin-right: 50px;
-    white-space: pre;
-
 }
 
 .TopBlockAbtUs .TopBlockAbtUs-textBox button{
