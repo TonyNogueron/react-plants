@@ -10,6 +10,8 @@ export default function Register() {
 
   const [usernameWarn, setUsernameWarn] = useState("");
   const [emailWarn, setEmailWarn] = useState("");
+  const [passwordWarn, setPasswordWarn] = useState("");
+  const [confirmPasswordWarn, setConfirmPasswordWarn] = useState("");
 
   // Handling the register
   const handleUsernameRegister = (e) => {
@@ -39,8 +41,9 @@ export default function Register() {
       //Submit, after validation
       const isUsernameValid = await validateUsername(usernameRegister);
       const isEmailValid = validateEmail(emailRegister);
+      const isPasswordValid = validatePassword(passwordRegister);
 
-      if (isUsernameValid && isEmailValid) {
+      if (isUsernameValid && isEmailValid && isPasswordValid) {
         //Submit
       }
     }
@@ -78,6 +81,53 @@ export default function Register() {
       ans = true;
     }
     return ans;
+  };
+
+  const validatePassword = (password) => {
+    let ans = false;
+    var strongRegex = new RegExp(
+      "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])"
+    );
+    var mediumRegex = new RegExp(
+      "^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))"
+    );
+    if (password.length < 8) {
+      ans = false;
+      setPasswordWarn("Password must be at least 8 characters long");
+    } else {
+      if (strongRegex.test(password)) {
+        ans = true;
+        setPasswordWarn("");
+        //Good password
+      } else if (mediumRegex.test(password)) {
+        ans = false;
+        setPasswordWarn(
+          "Password must contain at least one number, one lowercase and one uppercase letter and one special character (!@#$%^&*)"
+        );
+        // Medium password
+      } else {
+        ans = false;
+        setPasswordWarn(
+          "Password must contain at least one number, one lowercase and one uppercase letter and one special character (!@#$%^&*)"
+        );
+        // Weak password
+      }
+    }
+    return ans;
+  };
+
+  const togglePassword = () => {
+    const password = document.getElementById("exampleInputPassword1");
+    const confirmPassword = document.getElementById(
+      "exampleInputConfirmPassword1"
+    );
+    if (password.type === "password") {
+      password.type = "text";
+      confirmPassword.type = "text";
+    } else {
+      password.type = "password";
+      confirmPassword.type = "password";
+    }
   };
 
   return (
@@ -130,6 +180,11 @@ export default function Register() {
                       placeholder="Password"
                       onChange={handlePasswordRegister}
                     />
+                    {passwordWarn !== "" && (
+                      <small id="passwordWarn" className="form-text text-muted">
+                        {passwordWarn}
+                      </small>
+                    )}
                   </div>
                   <div className="form-group">
                     <label form="exampleInputPassword1">Confirm Password</label>
@@ -140,6 +195,14 @@ export default function Register() {
                       placeholder="Password"
                       onChange={handleConfirmPasswordRegister}
                     />
+                    {confirmPasswordWarn !== "" && (
+                      <small
+                        id="confirmPasswordWarn"
+                        className="form-text text-muted"
+                      >
+                        {confirmPasswordWarn}
+                      </small>
+                    )}
                   </div>
                   <button
                     type="submit"
