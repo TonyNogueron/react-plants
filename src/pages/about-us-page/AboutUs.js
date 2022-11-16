@@ -13,7 +13,6 @@ function AboutUs() {
     <div className="aboutUs">
       <Header />
         <TopBlockAbtUs/>
-
       <Footer />
 
     </div>

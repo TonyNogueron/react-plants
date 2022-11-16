@@ -4,6 +4,7 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import TopBlock from "../../components/top-block/topBlock";
 import ImageSlider from "../../components/image-slider/ImageSlider";
+import TopBlockAbtUs from "../../components/top-block-abtUs/TopBlockAbtUs";
 import styles from "./HomePage.css";
 
 const slidesArray = [
@@ -20,7 +21,6 @@ function HomePage() {
   return (
     <div className="homePage">
       <Header />
-        <ImageSlider slides={slidesArray} />
         <TopBlock/>
         <Footer />
     </div>
