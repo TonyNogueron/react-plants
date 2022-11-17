@@ -69,6 +69,63 @@
     margin-left: 25%;
     margin-right: 25%;
     box-shadow: 0 0 10px #0f8325;
-
 }
 
+@media screen and (max-width: 600px) {
+    .topBlock__container .topBlock__container__text{
+        font-size: 1rem;
+        color: #fcf9f7;
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .topBlock__container .topBlock__container__text  h1{
+        font-size: 25px;
+        width: 20%;
+        font-family: 'Showdriel', sans-serif;
+        margin-top: 20%;
+    }
+    .topBlock__container .topBlock__container__text .plantyLogo{
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        display: block;
+    }
+    .topBlock__container .topBlock__container__text .topBlock__container__text__description{
+        font-size: 1rem;
+        font-weight: 400;
+        color: #000000;
+        text-align: justify;
+        margin-left: 25%;
+        margin-right: 25%;
+        font-family: 'Montblanc', sans-serif;
+        margin-top: -5%;
+    }
+    .topBlock__container .topBlock__container__text .topBlock__container__text__button{
+        border:none;
+        background-color: #229d3a;
+        color: #fcf9f7;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 1%;
+        margin-left: 25%;
+        margin-right: 25%;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .topBlock__container .topBlock__container__text .topBlock__container__text__button:hover{
+        transition: 0.5s;
+        background-color: #0f8325;
+        color: #fcf9f7;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 12%;
+        text-align: left;
+        margin-left: 25%;
+        margin-right: 25%;
+        box-shadow: 0 0 10px #0f8325;
+    }
+
+}

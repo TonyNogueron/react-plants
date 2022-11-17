@@ -13,7 +13,7 @@ function TopBlock(){
                 <img src={logo} alt="Planty" className="plantyLogo"/>
                 <p className="topBlock__container__text__description">Planty is composed of two parts: an intelligent pot that is able to monitor the status of your plant and a digital service where you
                     can see the data gathered from the sensors that are included in the pot, all this through your mobile device.</p>
-                <button className="topBlock__container__text__button" onClick={() => navigate("/about-us")}>About Us <a>></a></button>
+                <button className="topBlock__container__text__button" onClick={() => navigate("/AboutUs")}>About Us <a>></a></button>
             </div>
             <div className="topBlock__container__image">
                 <img src={logo} alt="Logo" id="header_logo" />

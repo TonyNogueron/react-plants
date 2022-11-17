@@ -22,7 +22,7 @@ function LineChart() {
   useEffect(() => {
     const fetchData = async () => {
       await axios
-        .get("http://localhost:3001/measurement")
+        .get("http://localhost:3000/measurement")
         .then((res) => {
           const data = res.data;
           setChartData(data);
