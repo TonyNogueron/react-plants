@@ -115,17 +115,5 @@
         border-radius: 5px;
         cursor: pointer;
     }
-    .topBlock__container .topBlock__container__text .topBlock__container__text__button:hover{
-        transition: 0.5s;
-        background-color: #0f8325;
-        color: #fcf9f7;
-        border-radius: 5px;
-        cursor: pointer;
-        width: 12%;
-        text-align: left;
-        margin-left: 25%;
-        margin-right: 25%;
-        box-shadow: 0 0 10px #0f8325;
-    }
 
 }
