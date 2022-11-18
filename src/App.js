@@ -27,7 +27,7 @@ function App() {
             <Route exact path="/mainSensors/" element={<MainSensors />} />
             <Route exact path="/AboutUs/" element={<AboutUs />} />
             <Route exact path="/ContactPage/" element={<ContactPage />} />
-            <Route exact path = "/Login" element={<LoginPage/>}/>
+            <Route exact path="/Login" element={<LoginPage />} />
             <Route
               exact
               path="/........................./"

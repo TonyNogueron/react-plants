@@ -14,6 +14,8 @@ export default function Register() {
   const [passwordWarn, setPasswordWarn] = useState("");
   const [confirmPasswordWarn, setConfirmPasswordWarn] = useState("");
 
+  const [progress, setProgress] = useState(30);
+
   // Handling the register
   const handleUsernameRegister = (e) => {
     serUsernameRegister(e.target.value);
@@ -23,6 +25,7 @@ export default function Register() {
   };
   const handlePasswordRegister = (e) => {
     setPasswordRegister(e.target.value);
+    onTypePasswordValidation(e.target.value);
   };
   const handleConfirmPasswordRegister = (e) => {
     setConfirmPasswordRegister(e.target.value);
@@ -100,34 +103,42 @@ export default function Register() {
         ans = true;
         setPasswordWarn("");
         //Good password
+        setProgress(100);
       } else if (mediumRegex.test(password)) {
         ans = false;
         setPasswordWarn(
           "Password must contain at least one number, one lowercase and one uppercase letter and one special character (!@#$%^&*)"
         );
         // Medium password
+        setProgress(70);
       } else {
         ans = false;
         setPasswordWarn(
           "Password must contain at least one number, one lowercase and one uppercase letter and one special character (!@#$%^&*)"
         );
         // Weak password
+        setProgress(40);
       }
     }
     return ans;
   };
 
-  const togglePassword = () => {
-    const password = document.getElementById("exampleInputPassword1");
-    const confirmPassword = document.getElementById(
-      "exampleInputConfirmPassword1"
+  const onTypePasswordValidation = (password) => {
+    var strongRegex = new RegExp(
+      "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(.{8,})"
     );
-    if (password.type === "password") {
-      password.type = "text";
-      confirmPassword.type = "text";
+    var mediumRegex = new RegExp(
+      "^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(.{5,})"
+    );
+    if (strongRegex.test(password)) {
+      //Good password
+      setProgress(100);
+    } else if (mediumRegex.test(password)) {
+      // Medium password
+      setProgress(70);
     } else {
-      password.type = "password";
-      confirmPassword.type = "password";
+      // Weak password
+      setProgress(40);
     }
   };
 
@@ -181,7 +192,7 @@ export default function Register() {
                       placeholder="Password"
                       onChange={handlePasswordRegister}
                     />
-                    <ProgressBar progress={50} />
+                    <ProgressBar progress={progress} />
                     {passwordWarn !== "" && (
                       <small id="passwordWarn" className="form-text text-muted">
                         {passwordWarn}

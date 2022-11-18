@@ -4,9 +4,9 @@
     }
     
     #myprogressBar {
-    width: 1%;
-    height: 35px;
-    background-color: #4CAF50;
+    width: 30%;
+    height: 5px;
+    background-color: red;
     text-align: center;
     line-height: 32px;
     color: black;
