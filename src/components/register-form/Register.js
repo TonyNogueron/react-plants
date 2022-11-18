@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Register.css";
 import axios from "axios";
+import ProgressBar from "../progress-bar-component/ProgressBar";
 
 export default function Register() {
   const [usernameRegister, serUsernameRegister] = useState("");
@@ -180,6 +181,7 @@ export default function Register() {
                       placeholder="Password"
                       onChange={handlePasswordRegister}
                     />
+                    <ProgressBar progress={50} />
                     {passwordWarn !== "" && (
                       <small id="passwordWarn" className="form-text text-muted">
                         {passwordWarn}

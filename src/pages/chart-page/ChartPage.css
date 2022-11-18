@@ -5,3 +5,14 @@
     top: 15%;
     left: 8%;
 }
+
+@media screen and (max-width: 768px) {
+    .chart_container{
+        height: 78%;
+        width: 90%;
+        position: absolute;
+        
+        left: 5%;
+        top : 15%;
+    }
+}

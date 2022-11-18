@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import useMediaQuery from "../../hooks/useMediaQueryHook/useMediaQuery";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -15,14 +16,11 @@ import { Line } from "react-chartjs-2";
 
 function LineChart() {
   const [chartData, setChartData] = useState({});
-
-  let temp = [];
-  let tempTime = [];
-
+  const isMobile = useMediaQuery("(max-width: 768px)");
   useEffect(() => {
     const fetchData = async () => {
       await axios
-        .get("http://localhost:3000/measurement")
+        .get("http://localhost:3001/measurement")
         .then((res) => {
           const data = res.data;
           setChartData(data);
@@ -43,8 +41,6 @@ function LineChart() {
     Tooltip,
     Legend
   );
-
-  console.log(chartData);
 
   let data = {
     labels: Array.isArray(chartData)
@@ -76,12 +72,14 @@ function LineChart() {
       },
     },
     scales: {
-        xAxis: {
-            ticks: {
-                maxTicksLimit: 15
-            }
-        }
+      xAxis: {
+        ticks: {
+          maxTicksLimit: 12,
+          display: !isMobile,
+        },
+      },
     },
+    maintainAspectRatio: false,
   };
   return <Line options={options} data={data} />;
 }
