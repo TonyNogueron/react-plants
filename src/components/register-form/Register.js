@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Register.css";
 import axios from "axios";
 import ProgressBar from "../progress-bar-component/ProgressBar";
+import Swal from "sweetalert2";
 
 export default function Register() {
   const [usernameRegister, serUsernameRegister] = useState("");
@@ -40,17 +41,61 @@ export default function Register() {
       passwordRegister === "" ||
       confirmPasswordRegister === ""
     ) {
-      //Error "All fields are required"
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "All the fields are required!",
+      });
     } else {
       //Submit, after validation
       const isUsernameValid = await validateUsername(usernameRegister);
       const isEmailValid = validateEmail(emailRegister);
       const isPasswordValid = validatePassword(passwordRegister);
+      const isConfirmPasswordValid = validateConfirmPassword(
+        confirmPasswordRegister
+      );
 
-      if (isUsernameValid && isEmailValid && isPasswordValid) {
+      if (
+        isUsernameValid &&
+        isEmailValid &&
+        isPasswordValid &&
+        isConfirmPasswordValid
+      ) {
         //Submit
+        const data = {
+          username: usernameRegister,
+          email: emailRegister,
+          psswd: passwordRegister,
+        };
+        await axios
+          .post("http://localhost:3001/user", data)
+          .then((res) => {
+            Swal.fire({
+              icon: "success",
+              title: "Success",
+              text: "Your account has been created!",
+            });
+          })
+          .catch((err) => {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Something went wrong!",
+            });
+            console.log(err);
+          });
       }
     }
+  };
+
+  const validateConfirmPassword = (confirmPassword) => {
+    if (confirmPassword === passwordRegister) {
+      setConfirmPasswordWarn("");
+    } else {
+      setConfirmPasswordWarn("Password does not match");
+      return false;
+    }
+    return true;
   };
 
   const validateUsername = async (username) => {
