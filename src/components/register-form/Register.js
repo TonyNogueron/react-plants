@@ -3,8 +3,11 @@ import styles from "./Register.css";
 import axios from "axios";
 import ProgressBar from "../progress-bar-component/ProgressBar";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
+  const navigate = useNavigate();
+
   const [usernameRegister, serUsernameRegister] = useState("");
   const [emailRegister, setEmailRegister] = useState("");
   const [passwordRegister, setPasswordRegister] = useState("");
@@ -70,11 +73,14 @@ export default function Register() {
         await axios
           .post("http://localhost:3001/user", data)
           .then((res) => {
-            Swal.fire({
-              icon: "success",
-              title: "Success",
-              text: "Your account has been created!",
-            });
+            Swal.fire(
+              {
+                icon: "success",
+                title: "Success",
+                text: "Your account has been created!",
+              },
+              navigate("/login")
+            );
           })
           .catch((err) => {
             Swal.fire({
