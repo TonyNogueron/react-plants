@@ -7,6 +7,7 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/home-page/HomePage";
+import ProtectedRoute from "./components/protected-route-component/ProtectedRoute";
 
 import RegisterPage from "./pages/register-page/RegisterPage";
 import MainSensors from "./pages/sensors-page/mainSensors";
@@ -22,10 +23,9 @@ function App() {
       <>
         <Router>
           <Routes>
-            <Route exact path="*" element={<ErrorPage/>}/>
+            <Route exact path="*" element={<ErrorPage />} />
             <Route exact path="/" element={<HomePage />} />
             <Route exact path="/RegisterPage/" element={<RegisterPage />} />
-            <Route exact path="/mainSensors/" element={<MainSensors />} />
             <Route exact path="/AboutUs/" element={<AboutUs />} />
             <Route exact path="/ContactPage/" element={<ContactPage />} />
             <Route exact path="/Login" element={<LoginPage />} />
@@ -34,7 +34,25 @@ function App() {
               path="/........................./"
               element={<AddPlant />}
             />
-            <Route exact path="/chart/" element={<ChartPage />} />
+            <Route
+              exact
+              path="/mainSensors/"
+              element={
+                <ProtectedRoute>
+                  <MainSensors />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              exact
+              path="/chart/"
+              element={
+                <ProtectedRoute>
+                  <ChartPage />{" "}
+                </ProtectedRoute>
+              }
+            />
           </Routes>
         </Router>
       </>
