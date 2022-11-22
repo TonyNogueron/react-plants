@@ -15,13 +15,14 @@ import ContactPage from "./pages/contactPage/ContactPage";
 import AddPlant from "./pages/addPlant-page/AddPlant";
 import ChartPage from "./pages/chart-page/ChartPage";
 import LoginPage from "./pages/login-page/LoginPage";
-
+import ErrorPage from "./pages/error-page/ErrorPage";
 function App() {
   return (
     <div className="App">
       <>
         <Router>
           <Routes>
+            <Route exact path="*" element={<ErrorPage/>}/>
             <Route exact path="/" element={<HomePage />} />
             <Route exact path="/RegisterPage/" element={<RegisterPage />} />
             <Route exact path="/mainSensors/" element={<MainSensors />} />
