@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./LoginRegister.css";
 import Swal from "sweetalert2";
 import axios from "axios";
+import url from "../../config/apiConfig";
 
 function Login() {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ function Login() {
     } else {
       // Submit, after validation
       axios
-        .post("http://localhost:3001/user/login", {
+        .post(url + "user/login", {
           username: usernameLogin,
           psswd: passwordLogin,
         })

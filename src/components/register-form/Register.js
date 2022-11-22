@@ -4,6 +4,7 @@ import axios from "axios";
 import ProgressBar from "../progress-bar-component/ProgressBar";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import url from "../../config/apiConfig";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -71,7 +72,7 @@ export default function Register() {
           psswd: passwordRegister,
         };
         await axios
-          .post("http://localhost:3001/user", data)
+          .post(url + "user", data)
           .then((res) => {
             Swal.fire(
               {
@@ -107,7 +108,7 @@ export default function Register() {
   const validateUsername = async (username) => {
     let answer = false;
     await axios
-      .post("http://localhost:3001/user/validate", { username })
+      .post(url + "user/validate", { username })
       .then((res) => {
         if (res.status === 202) {
           answer = true;
