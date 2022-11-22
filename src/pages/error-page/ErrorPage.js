@@ -1,14 +1,18 @@
 import React from "react";
 import styles from "./ErrorPage.css";
-
+import errorImg from "../../images/error_svg.svg"
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 function ErrorPage(){
     return(
-        <div className="ErrorPageContainer">
-            <h1 className="ErrorPageTitle">404</h1>
-            <h2 className="ErrorPageSubtitle">Page not found</h2>
-            <p className="ErrorPageText">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
-            
-        </div>
+        <>
+            <Header/>
+                <div className="ErrorPageContainer">
+                    <h1 className="ErrorPageHeader">Seems something didn't go well...</h1>
+                    <img src={errorImg} alt="Error" className="ErrorPageImg"/>
+                </div>
+            <Footer/>
+        </>
     );
 }
 
