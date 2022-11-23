@@ -17,6 +17,8 @@ import AddPlant from "./pages/addPlant-page/AddPlant";
 import ChartPage from "./pages/chart-page/ChartPage";
 import LoginPage from "./pages/login-page/LoginPage";
 import ErrorPage from "./pages/error-page/ErrorPage";
+import UserMainpage from "./pages/userMainPage/UserMainPage";
+
 function App() {
   return (
     <div className="App">
@@ -29,6 +31,7 @@ function App() {
             <Route exact path="/AboutUs/" element={<AboutUs />} />
             <Route exact path="/ContactPage/" element={<ContactPage />} />
             <Route exact path="/Login" element={<LoginPage />} />
+            <Route exact path="/UserMainPage" element={<UserMainpage />} />
             <Route
               exact
               path="/........................./"

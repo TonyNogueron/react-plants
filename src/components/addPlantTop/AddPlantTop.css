@@ -1,0 +1,36 @@
+@import url('http://fonts.cdnfonts.com/css/crox');
+@import url('http://fonts.cdnfonts.com/css/montblanc');
+@import url('http://fonts.cdnfonts.com/css/showdriel');
+
+.AddPlantTop-container {
+    display: flex;
+    margin-top: 10%;
+    margin-bottom: 12%;
+    width: 100%;
+    position: absolute;
+    height: 150px;
+}
+
+.AddPlantTop-container .AddPlantTopTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 10%;
+    font-family: 'Showdriel', sans-serif;
+    margin-bottom: 5%;
+}
+
+.AddPlantTop-container button{
+    margin-left: 60%;
+    border: none;
+    background-color: #2b893a;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Crox', sans-serif;
+    height: 50px;
+    width: 10%;
+    margin-top: 2%;
+}
