@@ -44,7 +44,7 @@ function Login() {
               title: "Success",
               text: "You have successfully logged in!",
             });
-            navigate("/mainSensors");
+            navigate("/UserMainPage");
             localStorage.setItem("loggedIn", true);
             localStorage.setItem("idUser", res.data.idUser);
           }
