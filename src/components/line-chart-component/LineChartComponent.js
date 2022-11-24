@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import useMediaQuery from "../../hooks/useMediaQueryHook/useMediaQuery";
+import url from "../../config/apiConfig";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -20,7 +21,7 @@ function LineChart() {
   useEffect(() => {
     const fetchData = async () => {
       await axios
-        .get("http://localhost:3001/measurement")
+        .get(url + "measurement")
         .then((res) => {
           const data = res.data;
           setChartData(data);

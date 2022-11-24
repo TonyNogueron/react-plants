@@ -7,18 +7,39 @@ import LightPercentage from "../../components/lightPercentage/LightPercentage";
 import EarthHumidity from "../../components/earthHumidity/EarthHumidity";
 import WaterPlants from "../../components/waterPlants/WaterPlants";
 import WaterLevels from "../../components/waterLevels/WaterLevels";
+import url from "../../config/apiConfig";
+import { useEffect, useState } from "react";
 
-function MainSensors() {
+import axios from "axios";
+
+function MainSensors({ plantId }) {
+  const [sensorData, setSensorData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      await axios
+        .get(url + "measurement/last/?id=" + plantId)
+        .then((res) => {
+          const data = res.data[0];
+          setSensorData(data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    fetchData();
+  }, []);
+
+  console.log(sensorData);
   return (
     <div>
       <Header />
-        <SensorCard/>
-        <WaterPlants/>
-        <WeatherHumidity/>
-        <LightPercentage/>
-        <EarthHumidity/>
-        <WaterLevels/>
-        <WaterPlants/>
+      <SensorCard />
+      <WeatherHumidity humidity={sensorData?.airHumidity} />
+      <LightPercentage light={sensorData?.light} />
+      <EarthHumidity earthHumidity={sensorData?.earthHumidity} />
+      <WaterLevels waterLevel={sensorData?.waterLevel} />
+      <WaterPlants nextWater={0} />
       <Footer />
     </div>
   );

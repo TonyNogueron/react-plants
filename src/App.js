@@ -42,7 +42,7 @@ function App() {
               path="/mainSensors/"
               element={
                 <ProtectedRoute>
-                  <MainSensors />
+                  <MainSensors plantId={1} />
                 </ProtectedRoute>
               }
             />

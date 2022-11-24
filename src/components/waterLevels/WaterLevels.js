@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./WaterLevels.css";
 
-function WeatherHumidity() {
+function WaterLevels({waterLevel}) {
     return (
         <div className="WaterLevels">
             <div className = "imageWat">
@@ -10,7 +10,7 @@ function WeatherHumidity() {
                         <h1>Water level</h1>
                     </div>
                     <div className="WaterLevelsText" id = "box-text">
-                        <h2>0 %</h2>
+                        <h2>{waterLevel} %</h2>
                     </div>
                 </div>
             </div>
@@ -18,4 +18,4 @@ function WeatherHumidity() {
     );
 }
 
-export default WeatherHumidity;
+export default WaterLevels;

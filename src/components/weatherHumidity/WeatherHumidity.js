@@ -2,14 +2,14 @@ import React from "react";
 import styles from "./WeatherHumidity.css";
 import waterDropImg from "../../images/waterDrop.png";
 
-function WeatherHumidity() {
+function WeatherHumidity({ humidity }) {
     return (
         <div className="percentageHum">
             <div className = "imageHum">
                 <img src={waterDropImg} alt="humidity" id = "imgHumidity" />
                 <div className="percentageHum__container">
                     <div className="percentageHum__container__percentage" id = "box-text">
-                        <h1>0 %</h1>
+                        <h1>{humidity} %</h1>
                     </div>
                 </div>
             </div>
