@@ -1,0 +1,15 @@
+.plantCard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 100px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    align-self: center;
+    margin: 10px;
+}
+
