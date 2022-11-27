@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import SensorCard from "../../components/sensor-card/sensorCard";
 import WeatherHumidity from "../../components/weatherHumidity/WeatherHumidity";
@@ -7,6 +6,7 @@ import LightPercentage from "../../components/lightPercentage/LightPercentage";
 import EarthHumidity from "../../components/earthHumidity/EarthHumidity";
 import WaterPlants from "../../components/waterPlants/WaterPlants";
 import WaterLevels from "../../components/waterLevels/WaterLevels";
+import HeaderSensors from "../../components/header-sensors/HeaderSensors";
 import url from "../../config/apiConfig";
 import { useEffect, useState } from "react";
 
@@ -33,7 +33,7 @@ function MainSensors({ plantId }) {
   console.log(sensorData);
   return (
     <div>
-      <Header />
+      <HeaderSensors />
       <SensorCard />
       <WeatherHumidity humidity={sensorData?.airHumidity} />
       <LightPercentage light={sensorData?.light} />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+ import React, { useState } from "react";
 import styles from "./ProgressBar.css";
 
 export default function ProgressBar({ progress }) {
