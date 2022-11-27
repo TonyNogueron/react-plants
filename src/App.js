@@ -18,6 +18,7 @@ import ChartPage from "./pages/chart-page/ChartPage";
 import LoginPage from "./pages/login-page/LoginPage";
 import ErrorPage from "./pages/error-page/ErrorPage";
 import UserMainpage from "./pages/userMainPage/UserMainPage";
+import AddPlantForm from "./pages/addPlantForm/AddPlantForm";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route exact path="/ContactPage/" element={<ContactPage />} />
             <Route exact path="/Login" element={<LoginPage />} />
             <Route exact path="/UserMainPage" element={<UserMainpage />} />
+            <Route exact path="/AddPlant" element={<AddPlantForm />} />
             <Route
               exact
               path="/........................./"
