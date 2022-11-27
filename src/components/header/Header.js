@@ -8,10 +8,8 @@ import logo from "../../images/logo.png";
 
 const compactHeader = () => {
     const x = document.getElementById("myTopnotch");
-    if (x.className === "topnotch") {
+    if (x.className === "header_nav") {
         x.className += " responsive";
-    } else {
-        x.className = "topnotch";
     }
 }
 
