@@ -14,6 +14,11 @@
 }
 
 .plantCard img {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 100px;
     height: 100px;
     border-radius: 10px;
@@ -22,6 +27,11 @@
 }
 
 .plantCard button {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 100px;
     height: 100px;
     border-radius: 10px;
