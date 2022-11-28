@@ -1,13 +1,21 @@
 import React from "react";
 import styles from "./PlantCard.css";
+import { useNavigate } from "react-router-dom";
 
-function PlantCard(props) {
+function PlantCard({ plant }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/mainSensors/${plant.plantId}`);
+  };
+
   return (
     <div className="plantCard">
       <div className="plantCard__info">
-        <h3>{props.name}</h3>
-        <p>{props.description}</p>
-          <img src={"data:image/png;base64,"+props.plantImage} alt="plant" />
+        <h3>{plant.plantName}</h3>
+        <p>{plant.plantType}</p>
+        <img src={"data:image/png;base64," + plant.plantImage} alt="plant" />
+        <button onClick={handleClick} />
       </div>
     </div>
   );

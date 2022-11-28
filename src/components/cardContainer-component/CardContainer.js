@@ -2,11 +2,12 @@ import React from "react";
 import PlantCard from "../plantCard-component/PlantCard";
 import styles from "./CardContainer.css";
 
-
-function CardContainer() {
+function CardContainer({ plants }) {
   return (
     <div className="cardContainer">
-        <PlantCard class={styles.plantCard} name = "Plant" plantType = "Description"/>
+      {plants.map((plant) => (
+        <PlantCard plant={plant} />
+      ))}
     </div>
   );
 }
