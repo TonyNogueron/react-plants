@@ -15,7 +15,7 @@ function PlantCard({ plant }) {
         <h3>{plant.plantName}</h3>
         <p>{plant.plantType}</p>
         <img src={"data:image/png;base64," + plant.plantImage} alt="plant" />
-        <button onClick={handleClick} />
+        <button onClick={handleClick}>View Plant</button>
       </div>
     </div>
   );
