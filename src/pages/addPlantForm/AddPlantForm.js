@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 import styles from "./AddPlantForm.css";
-import Header from "../../components/header/Header";
+import HeaderSensors from "../../components/header-sensors/HeaderSensors";
 import Footer from "../../components/footer/Footer";
 import url from "../../config/apiConfig";
 
@@ -42,7 +42,7 @@ function AddPlantForm() {
 
   return (
     <>
-      <Header />
+      <HeaderSensors />
       <section id="register_background">
         <div className="container">
           <div className="row">
