@@ -29,8 +29,8 @@ function HeaderSensors() {
         <img src={logo} alt="Logo" id="header_logo" />
       </div>
       <div class="header_nav" id="myTopnotch">
-        <a onClick={() => navigate("/UserMainPage")}>MyPlants</a>
-        <a onClick={() => navigate("/AddPlant")}> Register Plant</a>
+        <a onClick={() => navigate("/UserMainPage")}>My Plants</a>
+        <a onClick={() => navigate("/AddPlant")}>Add Plant</a>
         <a id="login-button" onClick={handleLogout}>
           Logout
         </a>
