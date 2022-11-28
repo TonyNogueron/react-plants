@@ -9,11 +9,14 @@ import WaterLevels from "../../components/waterLevels/WaterLevels";
 import HeaderSensors from "../../components/header-sensors/HeaderSensors";
 import url from "../../config/apiConfig";
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 import axios from "axios";
 
-function MainSensors({ plantId }) {
+function MainSensors() {
   const [sensorData, setSensorData] = useState([]);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const plantId = searchParams.get("idPlant");
 
   useEffect(() => {
     const fetchData = async () => {

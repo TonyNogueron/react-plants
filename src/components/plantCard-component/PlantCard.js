@@ -6,7 +6,7 @@ function PlantCard({ plant }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/mainSensors/${plant.plantId}`);
+    navigate(`/mainSensors/?idPlant=${plant.idPlant}`);
   };
 
   return (
