@@ -18,3 +18,13 @@
     height: 100px;
     border-radius: 10px;
 }
+
+.plantCard button {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #0f8325;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+}
