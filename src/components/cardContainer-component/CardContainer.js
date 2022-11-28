@@ -6,6 +6,7 @@ import styles from "./CardContainer.css";
 function CardContainer() {
   return (
     <div className="cardContainer">
+        <PlantCard class={styles.plantCard} name = "Plant" plantType = "Description"/>
     </div>
   );
 }
