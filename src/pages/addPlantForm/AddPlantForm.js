@@ -6,6 +6,7 @@ import styles from "./AddPlantForm.css";
 import HeaderSensors from "../../components/header-sensors/HeaderSensors";
 import Footer from "../../components/footer/Footer";
 import url from "../../config/apiConfig";
+import Swal from "sweetalert2";
 
 function AddPlantForm() {
   const navigate = useNavigate();
@@ -16,28 +17,42 @@ function AddPlantForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData();
 
-    formData.append("plantName", plantName);
-    formData.append("plantType", plantType);
-    formData.append("plantIconImage", plantIconFile);
-    formData.append("idUser", localStorage.getItem("idUser"));
-    await axios
-      .post(`${url}plant`, formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      })
-      .then((response) => {
-        if (response.status === 200) {
-          alert("Plant added successfully");
-        } else {
-          alert("Error adding plant");
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    if (plantName === "" || plantType === "" || plantIconFile === "") {
+      alert("Please fill in all fields");
+    } else {
+      const formData = new FormData();
+
+      formData.append("plantName", plantName);
+      formData.append("plantType", plantType);
+      formData.append("plantIconImage", plantIconFile);
+      formData.append("idUser", localStorage.getItem("idUser"));
+      await axios
+        .post(`${url}plant`, formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        })
+        .then((response) => {
+          if (response.status === 200) {
+            Swal.fire({
+              icon: "success",
+              title: "Success",
+              text: "You have successfully added your plant!",
+            });
+            navigate("/UserMainPage");
+          } else {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Something went wrong!",
+            });
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   };
 
   return (

@@ -1,3 +1,9 @@
+:root{
+  --header-font: 'Showdriel', sans-serif;
+  --body-font: 'Montblanc', sans-serif;
+  --button-font: 'Crox', sans-serif;
+  
+}
 .container .row {
   display: flex;
   flex-direction: column;
@@ -29,6 +35,7 @@
   font-size: 2rem;
   font-weight: 700;
   color: #000000;
+  font-family: var(--body-font)
 }
 
 .container .row .col .register_form .form {
@@ -38,6 +45,7 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  font-family: var(--body-font);
 }
 
 .container .row .col .register_form .form .form-group {
@@ -61,6 +69,7 @@
   font-weight: 500;
   color: #000000;
   background-color: #e3e2e2;
+  font-family: var(--body-font);
 }
 
 .container .row .col .register_form .form .form-group .text-muted {
@@ -86,6 +95,7 @@
   cursor: pointer;
   border-style: none;
   margin-bottom: 50px;
+  font-family: var(--button-font)
 }
 
 .container .row .col .register_form .submitButton:hover {

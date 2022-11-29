@@ -2,6 +2,13 @@
 @import url('http://fonts.cdnfonts.com/css/montblanc');
 @import url('http://fonts.cdnfonts.com/css/showdriel');
 
+:root{
+    --header-font: 'Showdriel', sans-serif;
+    --body-font: 'Montblanc', sans-serif;
+    --button-font: 'Crox', sans-serif;
+    
+}
+
 .topBlock__container .topBlock__container__text {
     font-size: 2rem;
     color: #fcf9f7;
@@ -56,6 +63,7 @@
     margin-right: 25%;
     border-radius: 5px;
     cursor: pointer;
+    font-family: var(--button-font);
 }
 
 .topBlock__container .topBlock__container__text .topBlock__container__text__button:hover{

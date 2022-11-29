@@ -4,15 +4,8 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    width: 80%;
-    height: 50%;
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-    margin-top: 18%;
-    margin-left: 10%;
-    margin-right: 10%;
+    align-content: stretch;
     position: absolute;
-    border-radius: 10px;
-
+    margin-top: 20%;
 }
 
