@@ -10,7 +10,7 @@ export default function SensorProp({ image, title, value, units }) {
       </div>
       <div className="Value-Container">
         <p className="SensorProp-value">
-          {value.toString() + " " + (units === undefined ? "%" : units)}
+          {(value === undefined) ? "" :  value.toString() + " " + (units === undefined ? "%" : units)}
         </p>
       </div>
     </li>

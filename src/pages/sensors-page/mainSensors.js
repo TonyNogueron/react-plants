@@ -45,24 +45,24 @@ function MainSensors() {
           <SensorProp
               class={styles.SensorCardsContainer}
               title="Temperature"
-              value={sensorData.temperature.toFixed(2)}
+              value={sensorData?.temperature?.toFixed(2)}
               units="°C"
             />
             <SensorProp
               class={styles.SensorCardsContainer}
               title="Weather Humidity"
-              value={sensorData.airHumidity}
+              value={sensorData?.airHumidity}
             />
             <SensorProp
               class={styles.SensorCardsContainer}
               title="Light Sensor"
-              value={sensorData.light}
+              value={sensorData?.light}
               image={luzLogo}
             />
             <SensorProp
               class={styles.SensorCardsContainer}
               title="Earth Humidity"
-              value={sensorData.earthHumidity}
+              value={sensorData?.earthHumidity}
               image={earthHumidity}
             />
             <WaterPlant class={styles.SensorCardsContainer} />
