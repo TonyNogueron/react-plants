@@ -6,6 +6,7 @@ import SensorsContainer from "../../components/sensorsContainer/SensorsContainer
 import SensorProp from "../../components/SensorProp/SensorProp";
 import WaterPlant from "../../components/WaterPlants-component/WaterPlant";
 import luzLogo from "../../images/luz_svg.svg";
+import airImage from "../../images/AirHumidity_svg.svg";
 import earthHumidity from "../../images/earthHum_svg.svg";
 import styles from "../../components/sensorsContainer/SensorsContainer.css";
 import url from "../../config/apiConfig";
@@ -52,20 +53,21 @@ function MainSensors() {
               class={styles.SensorCardsContainer}
               title="Weather Humidity"
               value={sensorData?.airHumidity}
+              image={airImage}
             />
             <SensorProp
               class={styles.SensorCardsContainer}
-              title="Light Sensor"
+              title="Light"
               value={sensorData?.light}
               image={luzLogo}
             />
             <SensorProp
               class={styles.SensorCardsContainer}
-              title="Earth Humidity"
+              title="Soil Humidity"
               value={sensorData?.earthHumidity}
               image={earthHumidity}
             />
-            <WaterPlant class={styles.SensorCardsContainer} />
+            <WaterPlant class={styles.SensorCardsContainer} plantId = {plantId}/>
           </>
         }
       />

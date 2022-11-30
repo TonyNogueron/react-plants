@@ -9,7 +9,7 @@
     transform: translate(-50%, -50%);
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);
     margin-top: 1%;
-    background-color: #B8B79F;
+    background-color:rgba(108, 134, 65, 0.5);;
 }
 
 #svgStatus{
