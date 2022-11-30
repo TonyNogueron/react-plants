@@ -13,7 +13,7 @@
     font-size: 2rem;
     color: #fcf9f7;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 10%;
     margin-bottom: 10%;
     padding: 10px;
     border-radius: 10px;
@@ -37,6 +37,8 @@
     height: 100px;
     margin: 0 auto;
     display: block;
+    fill: #282c34;
+    margin-top: 2%
 }
 
 .topBlock__container .topBlock__container__text .topBlock__container__text__description{
@@ -68,15 +70,9 @@
 
 .topBlock__container .topBlock__container__text .topBlock__container__text__button:hover{
     transition: 0.5s;
-    background-color: #0f8325;
-    color: #fcf9f7;
-    border-radius: 5px;
+    background: #3a6e5a;
     cursor: pointer;
-    width: 12%;
-    text-align: left;
-    margin-left: 25%;
-    margin-right: 25%;
-    box-shadow: 0 0 10px #0f8325;
+    scale: 1.1;
 }
 
 @media screen and (max-width: 600px) {

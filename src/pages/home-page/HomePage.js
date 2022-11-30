@@ -21,6 +21,7 @@ function HomePage() {
   return (
     <div className="homePage">
       <Header />
+        <ImageSlider slides={slidesArray}/>
         <TopBlock/>
         <Footer />
     </div>

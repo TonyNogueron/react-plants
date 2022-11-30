@@ -9,6 +9,9 @@ import { useSearchParams } from "react-router-dom";
 
 import axios from "axios";
 
+
+
+
 function MainSensors() {
   const [sensorData, setSensorData] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -30,9 +33,10 @@ function MainSensors() {
   }, []);
 
   console.log(sensorData);
+  document.body.style.backgroundColor = "#E9E9E9";
   return (
     <div>
-      <HeaderSensors />
+        <HeaderSensors />
         <SensorsContainer />
       <SensorCard />
       <Footer />

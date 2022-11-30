@@ -24,7 +24,6 @@ function Header() {
       </div>
       <div class = "header_nav" id = "myTopnotch">
           <a onClick={() => navigate("/")} >Home</a>
-          <a onClick="#AboutUs"> About us</a>
           <a onClick={() => navigate("/ContactPage")}> Contact</a>
           <a id = "login-button" onClick={() => navigate("/Login")}>Login</a>
           {/* eslint-disable-next-line no-script-url */}
