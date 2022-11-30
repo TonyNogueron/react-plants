@@ -43,31 +43,36 @@ function MainSensors() {
       <SensorsContainer
         children={
           <>
-          <SensorProp
+            <SensorProp
               class={styles.SensorCardsContainer}
               title="Temperature"
               value={sensorData?.temperature?.toFixed(2)}
               units="°C"
+              image={luzLogo}
+              redirect={`/chart/?idPlant=${plantId}&type=temperature`}
             />
             <SensorProp
               class={styles.SensorCardsContainer}
               title="Weather Humidity"
               value={sensorData?.airHumidity}
               image={airImage}
+              redirect={`/chart/?idPlant=${plantId}&type=airHumidity`}
             />
             <SensorProp
               class={styles.SensorCardsContainer}
               title="Light"
               value={sensorData?.light}
               image={luzLogo}
+              redirect={`/chart/?idPlant=${plantId}&type=light`}
             />
             <SensorProp
               class={styles.SensorCardsContainer}
               title="Soil Humidity"
               value={sensorData?.earthHumidity}
               image={earthHumidity}
+              redirect={`/chart/?idPlant=${plantId}&type=earthHumidity`}
             />
-            <WaterPlant class={styles.SensorCardsContainer} plantId = {plantId}/>
+            <WaterPlant class={styles.SensorCardsContainer} plantId={plantId} />
           </>
         }
       />
