@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./sensorCard.css";
 //import ReactCSSTransitionGroup from 'react-transition-group'; // ES6
-import plantStatusImg from '../../images/plantStatus.svg';
+import plantStatusImg from '../../images/logo_svg.svg';
 
 
 const changeSVGColor = () => {

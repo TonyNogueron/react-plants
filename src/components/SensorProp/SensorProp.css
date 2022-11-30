@@ -1,0 +1,60 @@
+:root{
+    --header-font: 'Showdriel', sans-serif;
+    --body-font: 'Montblanc', sans-serif;
+    --button-font: 'Crox', sans-serif;
+
+}
+.SensorProp-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 25px;
+    padding: 1px;
+    list-style: none;
+    background: rgba(108, 134, 65, 0.6);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: var(--body-font);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.SensorProp-item .SensorProp-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    margin-left: 5%;
+}
+
+.SensorProp-item .Title-Container{
+    border-radius: 10px;
+    width: 150px;
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+
+}
+
+.SensorProp-item .Title-Container .SensorProp-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.SensorProp-item .Value-Container{
+    border-radius: 10px;
+    width: 50px;
+    margin-right: 5%;
+}
+
+.SensorProp-item .Value-Container .SensorProp-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+
+}

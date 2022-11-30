@@ -1,0 +1,17 @@
+.SensorCards-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 350px;
+    height: 495px;
+    border-radius: 10px;
+    position: absolute;
+    margin-top: 13%;
+    margin-left: 20%;
+    padding: 10px;
+    list-style: none;
+}
+
+

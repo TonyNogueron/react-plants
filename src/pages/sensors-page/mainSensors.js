@@ -1,12 +1,8 @@
 import React from "react";
 import Footer from "../../components/footer/Footer";
 import SensorCard from "../../components/sensor-card/sensorCard";
-import WeatherHumidity from "../../components/weatherHumidity/WeatherHumidity";
-import LightPercentage from "../../components/lightPercentage/LightPercentage";
-import EarthHumidity from "../../components/earthHumidity/EarthHumidity";
-import WaterPlants from "../../components/waterPlants/WaterPlants";
-import WaterLevels from "../../components/waterLevels/WaterLevels";
 import HeaderSensors from "../../components/header-sensors/HeaderSensors";
+import SensorsContainer from "../../components/sensorsContainer/SensorsContainer";
 import url from "../../config/apiConfig";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
@@ -37,12 +33,8 @@ function MainSensors() {
   return (
     <div>
       <HeaderSensors />
+        <SensorsContainer />
       <SensorCard />
-      <WeatherHumidity humidity={sensorData?.airHumidity} />
-      <LightPercentage light={sensorData?.light} />
-      <EarthHumidity earthHumidity={sensorData?.earthHumidity} />
-      <WaterLevels waterLevel={sensorData?.waterLevel} />
-      <WaterPlants nextWater={0} />
       <Footer />
     </div>
   );

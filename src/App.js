@@ -34,6 +34,7 @@ function App() {
             <Route exact path="/Login" element={<LoginPage />} />
             <Route exact path="/UserMainPage" element={<UserMainpage />} />
             <Route exact path="/AddPlant" element={<AddPlantForm />} />
+            <Route exact path="/mainSensors" element={<MainSensors/>}/>
             <Route
               exact
               path="/........................./"

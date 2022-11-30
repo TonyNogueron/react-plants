@@ -1,6 +1,6 @@
 .plantStatus_container{
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 500px;
     border-radius: 50%;
     display: inline-block;
     position: fixed;
@@ -8,6 +8,8 @@
     left: 70%;
     transform: translate(-50%, -50%);
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 1%;
+    background-color: #B8B79F;
 }
 
 #svgStatus{
