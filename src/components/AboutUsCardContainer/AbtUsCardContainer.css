@@ -1,0 +1,17 @@
+.abtUsCardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 1500px;
+    height: 600px;
+    border-radius: 10px;
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 20%;
+    padding: 10px;
+    list-style: none;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
