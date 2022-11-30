@@ -1,8 +1,8 @@
 .topBlock{
     background: rgba(255, 255, 255, 0.7);
     height: 529px;
-    margin-top: 12%;
-    width: 1920px;
+    margin-top: 10%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
