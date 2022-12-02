@@ -73,8 +73,8 @@ function EditPlantForm({ initialState }) {
       confirmButtonText: "Yes, delete it!",
       imageUrl:
         "https://memes.co.in/memes/update/uploads/2021/12/InShot_20211209_222013681.jpg",
-      imageWidth: 350,
-      imageHeight: 350,
+      imageWidth: 150,
+      imageHeight: 150,
       imageAlt: "Custom image",
     }).then((result) => {
       if (result.isConfirmed) {
@@ -141,15 +141,15 @@ function EditPlantForm({ initialState }) {
                       }
                     />
                   </div>
+                  <button className="button-delete" onClick={deletePlant}>
+                    Delete plant
+                  </button>
                   <button
                     type="submit"
                     className="btn-primary"
                     onClick={handleSubmit}
                   >
                     Save changes
-                  </button>
-                  <button className="button-delete" onClick={deletePlant}>
-                    Delete plant
                   </button>
                 </form>
               </div>
