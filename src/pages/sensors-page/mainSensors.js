@@ -7,6 +7,7 @@ import SensorProp from "../../components/SensorProp/SensorProp";
 import WaterPlant from "../../components/WaterPlants-component/WaterPlant";
 import luzLogo from "../../images/luz_svg.svg";
 import airImage from "../../images/AirHumidity_svg.svg";
+import temperatureImage from "../../images/temperatura_svg.svg";
 import earthHumidity from "../../images/earthHum_svg.svg";
 import styles from "../../components/sensorsContainer/SensorsContainer.css";
 import url from "../../config/apiConfig";
@@ -48,7 +49,7 @@ function MainSensors() {
               title="Temperature"
               value={sensorData?.temperature?.toFixed(2)}
               units="°C"
-              image={luzLogo}
+              image={temperatureImage}
               redirect={`/chart/?idPlant=${plantId}&type=temperature`}
             />
             <SensorProp

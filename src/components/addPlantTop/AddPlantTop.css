@@ -22,7 +22,7 @@
 .AddPlantTop-container button{
     margin-left: 58%;
     border: none;
-    background-color: #2b893a;
+    background-color: #39720C;
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -36,7 +36,7 @@
 }
 
 .AddPlantTop-container button:hover {
-    background-color: #2b893a;
+    background-color: #39720C;
     color: white;
     box-shadow: 7px 7px 5px -4px rgba(0,0,0,0.72);
     -webkit-box-shadow: 7px 7px 5px -4px rgba(0,0,0,0.72);
