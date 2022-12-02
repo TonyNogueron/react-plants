@@ -1,85 +1,73 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useState } from "react";
-import styles from "./AddPlantForm.css";
-import HeaderSensors from "../../components/header-sensors/HeaderSensors";
-import ImageSlider from "../../components/image-slider/ImageSlider";
-import Footer from "../../components/footer/Footer";
+import { useState, useEffect } from "react";
+import styles from "./EditPlantForm.css";
 import url from "../../config/apiConfig";
 import Swal from "sweetalert2";
 
-
-const slidesArray = [
-  {url: 'https://media.admagazine.com/photos/61de539e089751617cd2fc74/16:9/w_2560%2Cc_limit/plantas.jpg', title: 'Plants'},
-  {url: 'https://estaticos-cdn.prensaiberica.es/clip/d0fad945-7822-4c52-8820-d2f5487078cd_16-9-discover-aspect-ratio_default_0.jpg', title: 'Leaves'},
-  {url: 'https://www.clara.es/medio/2022/03/16/plantas-de-interior-bonitas_ad98ca6d_1280x720.jpg', title: 'Cactus'},
-  {url: 'https://quinto-poder.mx/u/fotografias/m/2022/9/28/f608x342-26452_56175_17.jpg', title: 'CactusBonito'},
-  {url: 'https://s1.eestatic.com/2021/03/22/actualidad/567954346_176146463_1706x960.jpg', title: 'Pots'},
-];
-
-
-function AddPlantForm() {
+function EditPlantForm({ initialState }) {
   const navigate = useNavigate();
 
   const [plantName, setPlantName] = useState("");
   const [plantType, setPlantType] = useState("");
   const [plantIconFile, setPlantIconFile] = useState();
 
+  useEffect(() => {
+    setValues();
+  }, []);
+
+  const setValues = () => {
+    setPlantName(initialState.plantName);
+    setPlantType(initialState.plantType);
+    setPlantIconFile(initialState.plantIconImage);
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
+    const formData = new FormData();
 
-    if (plantName === "" || plantType === "" || plantIconFile === "") {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Please fill all the fields",
-      });
-    } else {
-      const formData = new FormData();
-
-      formData.append("plantName", plantName);
-      formData.append("plantType", plantType);
+    formData.append("plantName", plantName);
+    formData.append("plantType", plantType);
+    if (plantIconFile !== undefined) {
       formData.append("plantIconImage", plantIconFile);
-      formData.append("idUser", localStorage.getItem("idUser"));
-      await axios
-        .post(`${url}plant`, formData, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        })
-        .then((response) => {
-          if (response.status === 200) {
-            Swal.fire({
-              icon: "success",
-              title: "Success",
-              text: "You have successfully added your plant!",
-            });
-            navigate("/UserMainPage");
-          } else {
-            Swal.fire({
-              icon: "error",
-              title: "Oops...",
-              text: "Something went wrong!",
-            });
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-        });
     }
+    formData.append("idPlant", initialState.idPlant);
+    await axios
+      .post(`${url}updatePlant`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
+      .then((response) => {
+        if (response.status === 200) {
+          Swal.fire({
+            icon: "success",
+            title: "Success",
+            text: "You have successfully edited your plant!",
+          });
+          navigate("/UserMainPage");
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+          });
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
     <>
-      <HeaderSensors />
-      <ImageSlider slides={slidesArray} />
       <section>
         <div className="container">
           <div className="row">
             <div className="col">
               <div className="register_plant_form">
-                <h1 className="addHeader">Add a new plant</h1>
+                <h1 className="addHeader">Edit your plant</h1>
                 <form className="form">
                   <div className="form-group">
                     <label form="inputPlantName">Plant name</label>
@@ -89,6 +77,7 @@ function AddPlantForm() {
                       id="inputPlantName"
                       aria-describedby="plantNameHelp"
                       placeholder="Enter a plant name"
+                      value={plantName}
                       onChange={(event) => setPlantName(event.target.value)}
                     />
                   </div>
@@ -100,6 +89,7 @@ function AddPlantForm() {
                       id="inputPlantType"
                       aria-describedby="plantTypeHelp"
                       placeholder="Enter a plant type"
+                      value={plantType}
                       onChange={(event) => setPlantType(event.target.value)}
                     />
                   </div>
@@ -122,7 +112,7 @@ function AddPlantForm() {
                     className="btn-primary"
                     onClick={handleSubmit}
                   >
-                    Add plant
+                    Edit plant
                   </button>
                 </form>
               </div>
@@ -130,10 +120,8 @@ function AddPlantForm() {
           </div>
         </div>
       </section>
-      <Footer />
-
     </>
   );
 }
 
-export default AddPlantForm;
+export default EditPlantForm;

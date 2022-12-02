@@ -19,6 +19,7 @@ import LoginPage from "./pages/login-page/LoginPage";
 import ErrorPage from "./pages/error-page/ErrorPage";
 import UserMainpage from "./pages/userMainPage/UserMainPage";
 import AddPlantForm from "./pages/addPlantForm/AddPlantForm";
+import EditPlant from "./pages/editPlant-page/EditPlant";
 
 function App() {
   return (
@@ -32,9 +33,24 @@ function App() {
             <Route exact path="/AboutUs/" element={<AboutUs />} />
             <Route exact path="/ContactPage/" element={<ContactPage />} />
             <Route exact path="/Login" element={<LoginPage />} />
-            <Route exact path="/UserMainPage" element={<UserMainpage />} />
-            <Route exact path="/AddPlant" element={<AddPlantForm />} />
-            <Route exact path="/mainSensors" element={<MainSensors/>}/>
+            <Route
+              exact
+              path="/UserMainPage"
+              element={
+                <ProtectedRoute>
+                  <UserMainpage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              exact
+              path="/AddPlant"
+              element={
+                <ProtectedRoute>
+                  <AddPlantForm />
+                </ProtectedRoute>
+              }
+            />
             <Route
               exact
               path="/........................./"
@@ -45,7 +61,7 @@ function App() {
               path="/mainSensors/"
               element={
                 <ProtectedRoute>
-                  <MainSensors plantId={1} />
+                  <MainSensors />
                 </ProtectedRoute>
               }
             />
@@ -56,6 +72,15 @@ function App() {
               element={
                 <ProtectedRoute>
                   <ChartPage />{" "}
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              exact
+              path="/editPlant"
+              element={
+                <ProtectedRoute>
+                  <EditPlant />
                 </ProtectedRoute>
               }
             />

@@ -11,6 +11,11 @@ function PlantCard({ plant }) {
   const handleClick = () => {
     navigate(`/mainSensors/?idPlant=${plant.idPlant}`);
   };
+
+  const editPlant = () => {
+    navigate(`/editPlant/?id=${plant.idPlant}`);
+  };
+
   const deletePlant = () => {
     Swal.fire({
       title: "Are you sure?",
@@ -59,7 +64,7 @@ function PlantCard({ plant }) {
           <button className="ViewPlant" onClick={handleClick}>
             View Plant
           </button>
-          <button className="DeletePlant" onClick={deletePlant}>
+          <button className="DeletePlant" onClick={editPlant}>
             Edit Plant
           </button>
         </div>
