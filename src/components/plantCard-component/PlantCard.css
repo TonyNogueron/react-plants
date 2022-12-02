@@ -30,22 +30,26 @@
     margin-top: 10%;
 }
 
+.plantCard .plantCard__info .plantCardText {
+    margin-left: 55%;
+    margin-bottom: 12%;
+}
+
+
 .plantCard .plantCard__info h3{
     position: absolute;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 600;
-    margin-top: 0%;
-    margin-left: 15%;
+    margin-top: 0;
     font-family: var(--body-font);
 }
 
 
 .plantCard .plantCard__info p{
     position: absolute;
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 400;
     margin-top: 3%;
-    margin-left: 15%;
     font-family: var(--body-font);
 }
 
@@ -59,7 +63,7 @@
     height: 150px;
     border-radius: 10px;
     margin-left: 5%;
-    margin-top: 0%;
+    margin-top: -15%;
 }
 
 
@@ -67,7 +71,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-top: -20%;
+    margin-top: -15%;
     margin-left: 15%;
 }
 

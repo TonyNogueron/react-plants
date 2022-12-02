@@ -50,8 +50,10 @@ function PlantCard({ plant }) {
   return (
     <div className="plantCard">
       <div className="plantCard__info">
-        <h3 className="PlantName">{plant.plantName}</h3>
-        <p className="PlantInfo">{plant.plantType}</p>
+        <div className="plantCardText">
+          <h3 className="PlantName">{plant.plantName}</h3>
+          <p className="PlantInfo">{plant.plantType}</p>
+        </div>
         <img src={"data:image/png;base64," + plant.plantImage} alt="plant" />
         <div className="plantCard__buttons">
           <button className="ViewPlant" onClick={handleClick}>
