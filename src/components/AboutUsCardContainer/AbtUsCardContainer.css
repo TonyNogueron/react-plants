@@ -4,12 +4,12 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 1500px;
+    width: 50%;
     height: 535px;
     border-radius: 10px;
     position: absolute;
     margin-top: 10%;
-    margin-left: 10%;
+    margin-left: 25%;
     margin-right: 20%;
     padding: 20px;
     list-style: none;
@@ -24,7 +24,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        width: 55%;
+        width: 60%;
         left: 5%;
         top: 10%;
         height: 68%;
