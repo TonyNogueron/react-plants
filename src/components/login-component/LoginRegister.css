@@ -60,7 +60,6 @@
 
 .loginForm__container .loginForm__container__form button:hover{
     transition: 0.5s;
-    background: #3a6e5a;
     cursor: pointer;
     scale: 1.1;
 }

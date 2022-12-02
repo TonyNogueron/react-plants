@@ -1,3 +1,11 @@
+:root{
+    --header-font: 'Showdriel', sans-serif;
+    --body-font: 'Montblanc', sans-serif;
+    --button-font: 'Crox', sans-serif;
+    --greenColor: #39720C;
+}
+
+
 .register_background{
     background-color: #e3e2e2;
     height: 100vh;
@@ -94,11 +102,11 @@
     font-size: 1rem;
     font-weight: 500;
     color: #FFFFFF;
-    background-color: #0f8325;
+    background-color: var(--greenColor);
 }
 
 .container .register_plant_form button:hover {
+    transition: 0.5s;
     cursor: pointer;
-    box-shadow: 0 0 10px 0 #0f8325;
     scale: 1.1;
 }

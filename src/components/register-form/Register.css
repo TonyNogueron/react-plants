@@ -2,7 +2,8 @@
   --header-font: 'Showdriel', sans-serif;
   --body-font: 'Montblanc', sans-serif;
   --button-font: 'Crox', sans-serif;
-  
+  --greenColor: #39720C;
+
 }
 .container .row {
   display: flex;
@@ -91,7 +92,7 @@
   font-size: 1.5rem;
   font-weight: 500;
   color: #ffffff;
-  background-color: #488b76;
+  background-color: var(--greenColor);
   cursor: pointer;
   border-style: none;
   margin-bottom: 50px;
@@ -99,9 +100,7 @@
 }
 
 .container .row .col .register_form .submitButton:hover {
-  background: #39720c;
-  box-shadow: 3px 4px 5px rgb(0 0 0 / 50%);
-  cursor: pointer;
   transition: 0.5s;
-  color: #ffffff;
+  cursor: pointer;
+  scale: 1.1;
 }

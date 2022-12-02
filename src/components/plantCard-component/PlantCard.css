@@ -7,6 +7,8 @@
     --header-font: 'Showdriel', sans-serif;
     --body-font: 'Montblanc', sans-serif;
     --button-font: 'Crox', sans-serif;
+    --greenColor: #39720C;
+
 }
 
 .plantCard {
@@ -84,17 +86,15 @@
 }
 
 .plantCard .plantCard__info .plantCard__buttons .ViewPlant{
-    background-color: #39720C;
-    border: 1px solid #000000;
+    background-color: var(--greenColor);
     border-radius: var(--border-radius-Box);
-    color: #000000;
     padding: 5px;
     cursor: pointer;
+    color: #FFFFFF;
 }
 
 .plantCard .plantCard__info .plantCard__buttons .ViewPlant:hover{
     transition: 0.5s;
-    background: #3a6e5a;
     cursor: pointer;
     scale: 1.1;
 }
