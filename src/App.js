@@ -71,7 +71,7 @@ function App() {
               path="/chart/"
               element={
                 <ProtectedRoute>
-                  <ChartPage />{" "}
+                  <ChartPage />
                 </ProtectedRoute>
               }
             />
