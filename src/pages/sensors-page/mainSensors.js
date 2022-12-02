@@ -17,10 +17,10 @@ import { useSearchParams } from "react-router-dom";
 import axios from "axios";
 
 function MainSensors() {
+
   const [sensorData, setSensorData] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const plantId = searchParams.get("idPlant");
-
   useEffect(() => {
     const fetchData = async () => {
       await axios

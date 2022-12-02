@@ -8,7 +8,9 @@ import axios from "axios";
 import url from "../../config/apiConfig";
 
 function UserMainPage() {
-  const [plants, setPlants] = useState([]);
+    document.body.style.backgroundColor = "#E9E9E9";
+
+    const [plants, setPlants] = useState([]);
 
   useEffect(() => {
     axios
