@@ -113,4 +113,7 @@
 .plantCard .plantCard__info .plantCard__buttons .DeletePlant:hover{
     background-color: #000000;
     color: #ffffff;
+    transition: 0.5s;
+    cursor: pointer;
+    scale: 1.1;
 }
