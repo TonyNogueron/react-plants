@@ -62,8 +62,8 @@
     width: 150px;
     height: 150px;
     border-radius: 10px;
-    margin-left: 5%;
-    margin-top: -15%;
+    margin-left: 7%;
+    margin-top: -12%;
 }
 
 
@@ -71,7 +71,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-top: -15%;
+    margin-top: -20%;
     margin-left: 10%;
 }
 
