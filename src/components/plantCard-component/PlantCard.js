@@ -60,7 +60,7 @@ function PlantCard({ plant }) {
             View Plant
           </button>
           <button className="DeletePlant" onClick={deletePlant}>
-            Delete Plant
+            Edit Plant
           </button>
         </div>
       </div>
