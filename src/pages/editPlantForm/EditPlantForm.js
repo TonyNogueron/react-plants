@@ -60,6 +60,40 @@ function EditPlantForm({ initialState }) {
       });
   };
 
+  const deletePlant = async (event) => {
+    event.preventDefault();
+
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#39720C",
+      cancelButtonColor: "#414141",
+      confirmButtonText: "Yes, delete it!",
+      imageUrl:
+        "https://memes.co.in/memes/update/uploads/2021/12/InShot_20211209_222013681.jpg",
+      imageWidth: 350,
+      imageHeight: 350,
+      imageAlt: "Custom image",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios
+          .delete(`${url}plant/?id=${initialState.idPlant}`)
+          .then((res) => {
+            Swal.fire("Deleted!", "Your plant has been deleted.", "success");
+            navigate("/UserMainPage");
+          })
+          .catch((err) => {
+            Swal.fire(
+              "Something went wrong!",
+              "Your plant has not been deleted.",
+              "error"
+            );
+          });
+      }
+    });
+  };
   return (
     <>
       <section>
@@ -112,7 +146,10 @@ function EditPlantForm({ initialState }) {
                     className="btn-primary"
                     onClick={handleSubmit}
                   >
-                    Edit plant
+                    Save changes
+                  </button>
+                  <button className="button-delete" onClick={deletePlant}>
+                    Delete plant
                   </button>
                 </form>
               </div>
