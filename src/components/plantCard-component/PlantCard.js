@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./PlantCard.css";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import axios from "axios";
+import url from "../../config/apiConfig";
 
 function PlantCard({ plant }) {
   const navigate = useNavigate();
@@ -15,14 +17,32 @@ function PlantCard({ plant }) {
       text: "You won't be able to revert this!",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
+      confirmButtonColor: "#39720C",
+      cancelButtonColor: "#414141",
       confirmButtonText: "Yes, delete it!",
+      imageUrl:
+        "https://memes.co.in/memes/update/uploads/2021/12/InShot_20211209_222013681.jpg",
+      imageWidth: 350,
+      imageHeight: 350,
+      imageAlt: "Custom image",
     }).then((result) => {
       if (result.isConfirmed) {
-        console.log("delete plant");
-
-        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+        axios
+          .delete(`${url}plant/?id=${plant.idPlant}`)
+          .then((res) => {
+            Swal.fire("Deleted!", "Your file has been deleted.", "success");
+            //wait 1 second to reload the page
+            setTimeout(() => {
+              window.location.reload();
+            }, 2000);
+          })
+          .catch((err) => {
+            Swal.fire(
+              "Something went wrong!",
+              "Your file has not been deleted.",
+              "error"
+            );
+          });
       }
     });
   };
