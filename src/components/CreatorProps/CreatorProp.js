@@ -8,6 +8,11 @@ export default function CreatorProp(props) {
             <div className="textContainer-CreatorProp">
                     <div className = "creatorProp-title">
                         <h2>{props.role}</h2>
+                        <a href={props.linkedin}>
+                            <img alt="LinkedinArmando" id="logosSocial" src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+                        </a>
+                        <a href={props.mailto}>
+                            <img alt = "Mail" id = "logosSocial" src = "https://img.shields.io/badge/Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white"/>                        </a>
                         <h3>{props.title}</h3>
                     </div>
                     <div className = "creatorProp-description">

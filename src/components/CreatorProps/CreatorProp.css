@@ -10,8 +10,8 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 150px;
-    margin-bottom: 25px;
+    height: 200px;
+    margin-bottom: 10px;
     padding: 1px;
     list-style: none;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
@@ -22,10 +22,12 @@
 .creatorProp .creatorProp-image {
     width: 120px;
     height: 120px;
-    border-radius: 10px;
+    border-radius: 50%;
     margin-left: 5%;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
+
+
 
 .creatorProp .textContainer-CreatorProp{
     display: flex;
@@ -64,15 +66,23 @@
 
 }
 
+#logosSocial{
+    height: 25px;
+}
+
+
 @media screen and (max-width: 768px) {
+    #logosSocial{
+        height: 15px;
+    }
     .creatorProp {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 120px;
-        margin-bottom: 25px;
+        height: 150px;
+        margin-bottom: 8px;
         padding: 1px;
         list-style: none;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
@@ -104,7 +114,7 @@
     }
 
     .creatorProp .textContainer-CreatorProp .creatorProp-description {
-        font-size: 10px;
+        font-size: 5px;
         font-weight: 300;
         margin-bottom: 10px;
         text-align: center;

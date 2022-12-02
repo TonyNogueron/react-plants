@@ -7,9 +7,9 @@ import monkepfp from "../../images/armandopfp.jpg";
 export default function AbtUsCardContainer() {
     return (
       <ul className="abtUsCardContainer">
-        <CreatorProp class={styles.CreatorProp} image={CamiTurnerImg} title="Camila Turner Escalante" description="ITC" role = "Project Management / UX | UI"/>
-        <CreatorProp class={styles.CreatorProp} image={tonypfp} title="Antonio Noguerón Bárcenas" description="ITC" role = "Back End Development"/>
-        <CreatorProp class={styles.CreatorProp} image={monkepfp} title="Armando Arredondo Valle" description="ITC" role = "Front End Development / UX | UI"/>
+        <CreatorProp class={styles.CreatorProp} image={CamiTurnerImg} title="Camila Turner Escalante" description="ITC | camilaturner_08@hotmail.com" role = "Project Management / UX | UI" linkedin = "https://www.linkedin.com/in/camila-turner-escalante/" mailto="mailto:camilaturner_08@hotmail.com"/>
+        <CreatorProp class={styles.CreatorProp} image={tonypfp} title="Antonio Noguerón Bárcenas" description="ITC | antonio.nogueron03@outlook.com" role = "Back End Development" linkedin = "https://www.linkedin.com/in/antonio-nogueron/" mailto="mailto:antonio.nogueron03@outlook.com"/>
+        <CreatorProp class={styles.CreatorProp} image={monkepfp} title="Armando Arredondo Valle" description="ITC | armando.arredondo.valle@outlook.com" role = "Front End Development / UX | UI" linkedin = "https://www.linkedin.com/in/armando-av/" mailto="mailto:armando.arredondo.valle@outlook.com"/>
       </ul>
     );
 }
