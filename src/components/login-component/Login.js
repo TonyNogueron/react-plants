@@ -86,7 +86,7 @@ function Login() {
                   </div>
                 </form>
                 <button type="submit" onClick={handleSubmitLogin}>
-                  Log in
+                  Login
                 </button>
                 <div className="GoToRegister">
                   <p>

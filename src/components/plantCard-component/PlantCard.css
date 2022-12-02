@@ -7,7 +7,6 @@
     --header-font: 'Showdriel', sans-serif;
     --body-font: 'Montblanc', sans-serif;
     --button-font: 'Crox', sans-serif;
-    
 }
 
 .plantCard {
@@ -85,7 +84,7 @@
 }
 
 .plantCard .plantCard__info .plantCard__buttons .ViewPlant{
-    background-color: #ffffff;
+    background-color: #39720C;
     border: 1px solid #000000;
     border-radius: var(--border-radius-Box);
     color: #000000;
@@ -94,9 +93,12 @@
 }
 
 .plantCard .plantCard__info .plantCard__buttons .ViewPlant:hover{
-    background-color: #000000;
-    color: #ffffff;
+    transition: 0.5s;
+    background: #3a6e5a;
+    cursor: pointer;
+    scale: 1.1;
 }
+
 
 .plantCard .plantCard__info .plantCard__buttons .DeletePlant{
     background-color: #ffffff;

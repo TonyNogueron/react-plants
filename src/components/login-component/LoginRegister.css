@@ -1,6 +1,13 @@
 @import url('http://fonts.cdnfonts.com/css/crox');
 @import url('http://fonts.cdnfonts.com/css/montblanc');
 
+:root{
+    --border-radius-Box: 5px;
+    --header-font: 'Showdriel', sans-serif;
+    --body-font: 'Montblanc', sans-serif;
+    --button-font: 'Crox', sans-serif;
+    --greenColor: #39720C;
+}
 
 .login-container .loginForm__container{
     display: flex;
@@ -43,12 +50,19 @@
     height: 2rem;
     border: none;
     outline: none;
-    background-color: #488b76;
+    background-color: var(--greenColor);
     color: #ffffff;
     font-family: 'Crox', sans-serif;
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.loginForm__container .loginForm__container__form button:hover{
+    transition: 0.5s;
+    background: #3a6e5a;
+    cursor: pointer;
+    scale: 1.1;
 }
 
 .loginForm__container .loginForm__container__form .GoToRegister a{

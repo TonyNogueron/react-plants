@@ -36,10 +36,8 @@
 }
 
 .AddPlantTop-container button:hover {
-    background-color: #39720C;
-    color: white;
-    box-shadow: 7px 7px 5px -4px rgba(0,0,0,0.72);
-    -webkit-box-shadow: 7px 7px 5px -4px rgba(0,0,0,0.72);
-    -moz-box-shadow: 7px 7px 5px -4px rgba(0,0,0,0.72);
-    transform: scale(1.1);
+    transition: 0.5s;
+    background: #3a6e5a;
+    cursor: pointer;
+    scale: 1.1;
 }
