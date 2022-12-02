@@ -16,3 +16,19 @@
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     background-color: #FFFFFF;
 }
+
+@media screen and (max-width: 768px) {
+    .abtUsCardContainer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 55%;
+        left: 5%;
+        top: 10%;
+        height: 68%;
+        border-radius: 10px;
+        padding: 20px;
+    }
+}

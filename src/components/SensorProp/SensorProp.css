@@ -62,3 +62,41 @@
   color: #fff;
   text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+  .SensorProp-item {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 20%;
+    height: 30px;
+    padding: 1px;
+    margin : 50px;
+  }
+  .SensorProp-item .SensorProp-image {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    margin-left: 5%;
+  }
+  .SensorProp-item .Title-Container {
+    border-radius: 10px;
+    width: 100px;
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+    .SensorProp-item .Title-Container .SensorProp-title {
+      font-size: 5px;
+      font-weight: 600;
+      color: #fff;
+      margin-left: 5%;
+      margin-top: 5%;
+    }
+  .SensorProp-item .Value-Container .SensorProp-value {
+    font-size: 5px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+  }
+  }

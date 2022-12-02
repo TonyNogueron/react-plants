@@ -10,6 +10,8 @@ const compactHeader = () => {
     const x = document.getElementById("myTopnotch");
     if (x.className === "header_nav") {
         x.className += " responsive";
+    } else {
+        x.className = "header_nav";
     }
 }
 

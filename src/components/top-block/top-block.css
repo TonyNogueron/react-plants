@@ -64,3 +64,32 @@
     scale: 1.1;
 }
 
+@media screen and (max-width: 768px) {
+    .topBlock__container .topBlock__container__text h1 {
+        font-size: 1.5rem;
+
+        text-align: center;
+        border-bottom: 2px solid #229d3a;
+        padding-bottom: 10px;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .topBlock__container .topBlock__container__text .plantyLogo {
+        width: 50px;
+        height: 50px;
+        display: block;
+        fill: #282c34;
+        margin: 2% auto 0;
+
+    }
+    .topBlock__container .topBlock__container__text .topBlock__container__text__description {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #000000;
+        text-align: justify;
+        margin-top: 2%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    }

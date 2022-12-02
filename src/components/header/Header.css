@@ -101,13 +101,15 @@ header h1:hover{
 @media screen and (max-width: 768px) {
     .header_nav{
         display: flex;
-
-
     }
     .header_nav .icon{
         position: absolute;
         right: 0;
         top: 0;
+        display: block;
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
     }
 
     .header_nav a{

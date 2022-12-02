@@ -12,3 +12,12 @@
 }
 
 
+@media screen and (max-width: 768px) {
+
+    .topBlock{
+        background: rgba(255, 255, 255, 0.7);
+        height: 100%;
+        margin-top: 10%;
+        position: absolute;
+    }
+}

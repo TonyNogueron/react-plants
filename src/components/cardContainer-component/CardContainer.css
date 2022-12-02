@@ -9,3 +9,16 @@
     margin-top: 20%;
 }
 
+@media screen and (max-width: 768px) {
+    .cardContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: stretch;
+        position: absolute;
+        margin-top: 45%;
+        width: 100%;
+    }
+}

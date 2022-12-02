@@ -121,3 +121,18 @@
     cursor: pointer;
     scale: 1.1;
 }
+
+@media screen and (max-width: 768px) {
+    .plantCard .plantCard__info {
+        margin-top: 10%;
+    }
+    .plantCard .plantCard__info .plantCardText {
+        margin-bottom: 10%;
+    }
+    .plantCard .plantCard__info h3 {
+        margin-top: 0;
+    }
+    .plantCard .plantCard__info p {
+        margin-top: 10%;
+    }
+}
