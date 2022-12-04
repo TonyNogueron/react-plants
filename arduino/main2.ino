@@ -3,23 +3,16 @@
 #include <ESP8266HTTPClient.h>
 #include <ArduinoJson.h>
 
-//const char* ssid = "Tec-IoT";
-//const char* password = "spotless.magnetic.bridge";
+const char* ssid = "Tec-IoT";
+const char* password = "spotless.magnetic.bridge";
 
-const char* ssid = "INFINITUM939A_2.4";
-const char* password = "Bwd3u5CWpR";
-
-//const char* awsUrlm = "http://192.168.1.70:3001/measurement";
 const char* awsUrlm = "http://plantyrestapi-env.eba-iepsrv9a.us-east-1.elasticbeanstalk.com/measurement";
 const String awsUrlp = "http://plantyrestapi-env.eba-iepsrv9a.us-east-1.elasticbeanstalk.com/pump";
 
-//const char* ssid = "Chaifon";
-//const char* password = "solo1minuto";
-
-const int ID_PLANT = 1;
+const int ID_PLANT = 10;
 
 unsigned long previousMillis = 0;
-const unsigned long submissionInterval = 60000 * 1;
+const unsigned long submissionInterval = 60000 * 5;
 
 unsigned int pMillisPump = 0;
 const unsigned int pumpInterval = 1000;
@@ -125,7 +118,7 @@ void loop() {
 
   if (currentMillis - pMillisPump >= pumpInterval) {
     pMillisPump = currentMillis;
-    http.begin(client, awsUrlp + "?id=1");
+    http.begin(client, awsUrlp + "?id=10");
     int httpCode = http.GET();
 
     if (httpCode > 0) {
@@ -138,7 +131,7 @@ void loop() {
         digitalWrite(d7, HIGH);
         delay(5000);
         digitalWrite(d7, LOW);
-        http.begin(client, awsUrlp + "?id=1&status=0");
+        http.begin(client, awsUrlp + "?id=10&status=0");
         int httpCode = http.PUT("ArduinoPut");
         if (httpCode > 0) {
           String payload = http.getString();
@@ -153,9 +146,6 @@ void loop() {
       Serial.println("Error on HTTP request");
     }
   }
-
-
-
 
 
   if (currentMillis - previousMillis >= submissionInterval) {
